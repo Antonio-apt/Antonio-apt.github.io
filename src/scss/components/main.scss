@@ -1,5 +1,5 @@
 .main {
-  padding: 1rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,12 +8,25 @@
   width: 100vw;
   font-size: 1.5rem;
   &__title {
-    font-size: calc(2.5 * 1em);
-  }
-  &__sub-title {
-    color: $clr-purple;
+    text-align: center;
     font-weight: 600;
   }
+  &__sub-title {
+    font-size: calc(2.5 * 1em);
+    color: $clr-purple;
+    text-align: center;
+ }
+ &__link {
+    color: $clr-light;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+    &:hover {
+      color: #CFD2D2;
+    }
+ }
   &__description {
     padding: 1rem;
     font-weight: bold;
