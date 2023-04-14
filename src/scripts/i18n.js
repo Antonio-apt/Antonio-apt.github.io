@@ -33,10 +33,10 @@ const initTranslations = () => {
         translateElement(el, languages);
       });
 
-      const langButtons = document.querySelectorAll(".lang-button");
-      langButtons.forEach(btn => {
-        btn.addEventListener("click", (e) => {
-          const locale = e.target.dataset.locale;
+      const langInputs = document.querySelectorAll(".language__control");
+      langInputs.forEach(input => {
+        input.addEventListener("change", (e) => {
+          const locale = e.target.value;
           i18next.changeLanguage(locale);
           elements.forEach(el => {
             translateElement(el, languages);

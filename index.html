@@ -16,12 +16,24 @@
         Antonio
       </h3>
       <div class="header__actions">
-        <button class="lang-button" data-locale="en">en</button>
-        <button class="lang-button" data-locale="pt">pt</button>
+        <div class="language" role="radiogroup" aria-labelledby="language-switcher1">
+          <div class="language__container--left">
+            <input class="language__control" type="radio" id="language1-1" name="language-switch1" value="en" checked>
+            <label class="language__label" for="language1-1" data-locale="en">
+              EN<span hidden> English</span>
+            </label>
+          </div>
+          <div class="language__container--right">
+            <input class="language__control" type="radio" id="language1-2" name="language-switch1" value="pt">
+            <label class="language__label" for="language1-2" data-locale="pt-BR">
+              PT-BR<span hidden> Português</span>
+            </label>
+          </div>
+        </div>        
       </div>
     </header>
     <section class="about-me">
-      <h1 data-i18n="hi" > hi </h1>
+      <h1 data-i18n="hello"></h1>
       <h2> Fullstack developer</h2>
     </section>
     <section class="experience">
