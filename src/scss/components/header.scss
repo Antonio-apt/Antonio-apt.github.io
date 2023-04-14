@@ -1,3 +1,20 @@
 .header {
-  
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  width: 100%;
+  background-color: transparent;
+  // background-image: linear-gradient( rgba(0,0,0,1) 0%, rgba(0,0,0,0) 28%, rgba(0,0,0,0) 60%);
+  &__title {
+    margin-left: 1rem;
+  }
+  &__actions {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+    height: 3rem;
+    background-color: transparent;
+    right: 0;
+  }
 }
