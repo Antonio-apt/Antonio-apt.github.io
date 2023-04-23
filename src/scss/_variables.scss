@@ -9,4 +9,53 @@ $clr-light: #fff;
 $clr-purple: #B2A4FF;
 $clr-dark-purple: #6255ab;
 $clr-yellow: #F8C269;
+$white: #FFFFFF;
+$black: #272727;
+
+// Typefaces
+// =============================================================================
+$font-sans-serif: Arial, sans-serif;
+
+// Typography
+// =============================================================================
+// Base
+$font-size:   16px;
+$line-height: 24px / $font-size;
+$font-family: $font-sans-serif;
+$color:       #222222;
+// Headings
+$font-size-h1:  13.5vw  !default;
+$font-size-h2:  32px  !default;
+$font-size-h3:  24px  !default;
+$font-size-h4:  16px  !default;
+$font-size-h5:  16px  !default;
+$font-size-h6:  15px  !default;
+$line-height-h: $line-height;
+// Weights
+$light:  300;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold:   700;
+
+// Breakpoints
+// =============================================================================
+$from-tiny:     500px              !default;
+$to-tiny:       $from-tiny - 1     !default;
+$from-small:    700px              !default;
+$to-small:      $from-small - 1    !default;
+$from-medium:   1000px             !default;
+$to-medium:     $from-medium - 1   !default;
+$from-large:    1200px             !default;
+$to-large:      $from-large - 1    !default;
+$from-big:      1400px             !default;
+$to-big:        $from-big - 1      !default;
+$from-huge:     1600px             !default;
+$to-huge:       $from-huge - 1     !default;
+$from-enormous: 1800px             !default;
+$to-enormous:   $from-enormous - 1 !default;
+$from-gigantic: 2000px             !default;
+$to-gigantic:   $from-gigantic - 1 !default;
+$from-colossal: 2400px             !default;
+$to-colossal:   $from-colossal - 1 !default;
 

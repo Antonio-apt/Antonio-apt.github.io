@@ -41,12 +41,10 @@ const initTranslations = () => {
           elements.forEach(el => {
             translateElement(el, languages);
           });
-          // Add the 'selected' class to the clicked button and remove it from the others
           langButtons.forEach(otherBtn => {
             otherBtn.classList.toggle("selected", otherBtn === e.target);
           });
         });
-        // Set the 'selected' class to the button corresponding to the current language
         btn.classList.toggle("selected", btn.dataset.locale === i18next.language);
       });
     });

@@ -3,7 +3,6 @@ import LocomotiveScroll from 'locomotive-scroll';
 import initTranslations from './scripts/i18n';
 import init from './scripts/star';
 
-const scroll = new LocomotiveScroll();
 
 const { BASE_URL } = import.meta.env
 
@@ -78,6 +77,11 @@ document.querySelector(".header__actions").onmousemove = e => {
   container.addEventListener('mouseleave', onMouseLeaveHandler);
   container.addEventListener('mousemove', onMouseMoveHandler);
 })();
+
+// const scroll = new LocomotiveScroll({
+//   el: document.querySelector('[data-scroll-container]'),
+//   smooth: true,
+// });
 
 
 initTranslations();
