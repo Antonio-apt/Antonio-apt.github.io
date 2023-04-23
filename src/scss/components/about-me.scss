@@ -23,6 +23,7 @@
       transition: transform 0.5s;
       word-wrap: break-word;
       height: fit-content;
+      cursor: default;
     }
     #{ $self }__text {
       color: #FFC512;
