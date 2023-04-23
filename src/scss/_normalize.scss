@@ -9,11 +9,11 @@ Document
 Use a better box model (opinionated).
 */
 
-*,
-::before,
-::after {
-	box-sizing: border-box;
-}
+// *,
+// ::before,
+// ::after {
+// 	box-sizing: border-box;
+// }
 
 /**
 1. Correct the line height in all browsers.
