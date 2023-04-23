@@ -12,8 +12,8 @@
   </head>
   <body>
     <header class="header">
-      <h3 class="header__title">
-        Antonio
+      <h3 data-i18n="construction" class="header__title">
+        in construction 🚧
       </h3>
       <div class="header__actions">
         <button class="lang-button" data-locale="pt">
@@ -34,16 +34,20 @@
         </button>  
       </div>
     </header>
-    <section id="about-me">
-      <h1 data-i18n="hello"></h1>
-      <h2> Fullstack developer</h2>
+    <section class="about-me">
+      <div class="about-me__container">
+        <h2 data-i18n="hello" class="about-me__text"></h2>
+        <h1 class="about-me__name">Antonio Souza</h1>
+        <h2 class="about-me__text"> Fullstack developer</h2>
+      </div>
+      
     </section>
-    <section id="experience">
+    <!-- <section id="experience">
     </section>
     <section id="knowledge">
     </section>
     <section id="footer">
-    </section>
+    </section> -->
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>

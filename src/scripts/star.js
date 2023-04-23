@@ -11,7 +11,7 @@ function init() {
 
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
-  document.getElementById('about-me').appendChild(renderer.domElement); // Append to div with ID "canvas-container"
+  document.querySelector('.about-me').appendChild(renderer.domElement);
 
   starGeo = new THREE.BufferGeometry();
   const positions = [];
@@ -37,7 +37,7 @@ function init() {
 
   window.addEventListener('resize', onWindowResize, false);
 
-  document.getElementById('about-me').addEventListener('mousemove', onMouseMove, false);
+  document.querySelector('.about-me').addEventListener('mousemove', onMouseMove, false);
 
   animate();
 }
@@ -49,11 +49,11 @@ function onWindowResize() {
 }
 
 function onMouseMove(event) {
-  const mouseX = event.clientX / window.innerWidth; // Normalize mouse position to range 0-1
-  const mouseY = event.clientY / window.innerHeight; // Normalize mouse position to range 0-1
+  const mouseX = event.clientX / window.innerWidth; 
+  const mouseY = event.clientY / window.innerHeight; 
 
-  camera.position.x = (mouseX - 0.5) * 0.5; // Update camera position based on mouse position
-  camera.position.y = (0.5 - mouseY) * 0.5; // Update camera position based on mouse position
+  camera.position.x = (mouseX - 0.5) * 0.5; 
+  camera.position.y = (0.5 - mouseY) * 0.5; 
   camera.lookAt(scene.position); 
 }
 

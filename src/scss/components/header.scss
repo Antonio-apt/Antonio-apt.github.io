@@ -29,8 +29,8 @@
       text-align: center;
       border-radius: 7px;
       cursor: pointer;
-      &:hover::before {
-        opacity: 1;
+      &.selected {
+        background-color: rgba(120, 120, 120, 0.8);
       }
       &::before {
         background: radial-gradient(

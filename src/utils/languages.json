@@ -1,8 +1,10 @@
 {
   "en": {
-    "hello": "Hi, I'm Antonio Souza"
+    "hello": "Hi, I'm",
+    "construction": "In construction 🚧"
   },
   "pt": {
-    "hello": "Ola, Eu sou o Antonio Souza"
+    "hello": "Ola, Eu sou o",
+    "construction": "Em construção 🚧"
   }
 }
