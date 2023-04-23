@@ -1,7 +1,7 @@
 import i18next from "i18next";
 
 const loadLanguages = () => {
-  return fetch('../utils/languages.json')
+  return fetch('/languages.json')
     .then(response => response.json());
 };
 
