@@ -1,17 +1,3 @@
-@font-face {
-  font-family: 'BebasNeue';
-  src:  url('../../utils/BebasNeue-Regular.ttf') format('ttf');
-}
-@font-face {
-  font-family: 'Neue Montreal';
-  src: url('./fonts/NeueMontreal-Medium.woff2') format('woff2'),
-      url('./fonts/NeueMontreal-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-}
-$font-neue-montreal: 'Neue Montreal';
-
-
 .about-me {
   $self: &;
   z-index: -100;
@@ -29,11 +15,10 @@ $font-neue-montreal: 'Neue Montreal';
     #{ $self }__name {
       display: inline-block;
       text-transform: uppercase;
-      // font-family: $font-neue-montreal;
       font-size: calc(7 * 1em);
       transition: transform 0.5s;
       word-wrap: break-word;
-      height: fit-content;
+      width: fit-content;
       cursor: default;
       text-shadow: 0.03em 0.03em 0 #464646;
     }
@@ -44,7 +29,9 @@ $font-neue-montreal: 'Neue Montreal';
     }
   }
   canvas {
+    display: block;
     position: fixed;
+    max-width: 100vw;
     top:0;
     left:0;
     z-index: -1;
