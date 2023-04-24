@@ -25,7 +25,7 @@
     &__border {
       background: radial-gradient(
         2000px circle at var(--mouse-x) var(--mouse-y),
-        rgba(0, 0, 0, 1),
+        rgb(49, 123, 243),
         transparent 40%
       );
       z-index: 1;
@@ -55,6 +55,7 @@
     }
   }
   .sidebar {
+    position: sticky;
     height: fit-content;
     border-radius: 7px;
     &__header {
