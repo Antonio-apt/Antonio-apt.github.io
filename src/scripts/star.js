@@ -13,7 +13,7 @@ function init() {
   initialRotation = camera.rotation.clone();
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
-  document.querySelector('main').appendChild(renderer.domElement);
+  document.querySelector('body').appendChild(renderer.domElement);
 
   starGeo = new THREE.BufferGeometry();
   const positions = [];

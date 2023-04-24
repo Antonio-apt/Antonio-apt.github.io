@@ -70,10 +70,10 @@ addGlow(".resume", "card") ;
   container.addEventListener('mousemove', onMouseMoveHandler);
 })();
 
-// const scroll = new LocomotiveScroll({
-//   el: document.querySelector('[data-scroll-container]'),
-//   smooth: true,
-// });
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('[data-scroll-container]'),
+  smooth: true,
+});
 
 
 initTranslations();

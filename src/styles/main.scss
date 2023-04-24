@@ -28,6 +28,14 @@ html {
     font-family: 'General Sans', sans-serif;
     background-color: $bg-dark;
     color: $clr-light;
+    canvas {
+      position: fixed;
+      display: block;
+      max-width: 100vw;
+      top:0;
+      left:0;
+      z-index: -1;
+    }
     button, input[type="submit"], input[type="reset"] {
       background: none;
       color: inherit;
@@ -36,17 +44,6 @@ html {
       font: inherit;
       cursor: pointer;
       outline: inherit;
-    }
-    main {
-      canvas {
-        position: fixed;
-        top: 0;
-        display: block;
-        max-width: 100vw;
-        top:0;
-        left:0;
-        z-index: -1;
-      }
     }
   }
 }
