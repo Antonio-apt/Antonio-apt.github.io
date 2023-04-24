@@ -1,10 +1,12 @@
 {
   "en": {
     "hello": "Hi, I'm",
-    "construction": "In construction 🚧"
+    "construction": "In construction 🚧",
+    "location": "Location"
   },
   "pt": {
     "hello": "Ola, Eu sou o",
-    "construction": "Em construção 🚧"
+    "construction": "Em construção 🚧",
+    "location": "Localização"
   }
 }

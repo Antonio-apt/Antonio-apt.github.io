@@ -12,7 +12,7 @@
   </head>
   <body>
     <header class="header">
-      <h3 data-i18n="construction" class="header__title">in construction 🚧</h3>
+      <!-- <h3 data-i18n="construction" class="header__title">in construction 🚧</h3> -->
       <div class="header__actions">
         <button class="lang-button" data-locale="pt">
           <div class="lang-button__border"></div>
@@ -29,16 +29,16 @@
       </div>
     </header>
     <main data-scroll-container data-scroll data-scroll-sticky id="scroll-container">
-        <section class="about-me">
+        <section class="about-me" data-scroll-section>
           <div class="about-me__container">
             <h2 data-i18n="hello" class="about-me__text"></h2>
             <h1 class="about-me__name">Antonio Souza</h1>
-            <h2 class="about-me__text">Fullstack developer</h2>
+            <h2 class="about-me__text" >Fullstack developer</h2>
           </div>
         </section>
 
-        <section class="resume">
-          <aside class="card sidebar">
+        <section class="resume" data-scroll-section>
+          <aside class="card sidebar" data-scroll data-scroll-sticky data-scroll-target=".resume">
             <div class="card__border"></div>
             <div class="card__content">
               <div class="sidebar__header">
@@ -73,7 +73,7 @@
                     </div>
 
                     <div class="sidebar__contact-info">
-                      <p class="sidebar__contact-title">Location</p>
+                      <p class="sidebar__contact-title" data-i18n="location"></p>
 
                       <address>São Paulo, BR</address>
                     </div>
@@ -115,9 +115,9 @@
             </div>
         </section>
         <!-- <section id="knowledge">
-      </section>
-      <section id="footer">
       </section> -->
+      <section id="footer">
+      </section>
       </div>
     </main>
     <script type="module" src="./src/main.js"></script>

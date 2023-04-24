@@ -1,9 +1,8 @@
 .resume {
-  display: flex;
   margin-inline: auto;
   align-items: stretch;
   gap: 1.5rem;
-  padding: 1rem 10rem;
+  margin: 15px 12px;
   &:hover > .card > .card__border {
     opacity: 1;
   }
@@ -75,6 +74,7 @@
 
 .sidebar {
   $self: &;
+  margin-bottom: 15px;
   position: sticky;
   height: fit-content;
   border-radius: 7px;
@@ -179,6 +179,20 @@
           font-size: 20px;
         }
       }
+    }
+  }
+}
+
+@media (min-width: $from-medium) {
+  .resume {
+    max-width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-inline: auto;
+    .sidebar {
+      margin-bottom: 0;
+      max-height: max-content;
     }
   }
 }
