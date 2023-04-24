@@ -4,9 +4,7 @@ import initTranslations from './scripts/i18n';
 import init from './scripts/star';
 import addGlow from './scripts/glow'
 
-
 const { BASE_URL } = import.meta.env
-
 
 addGlow(".header__actions", "lang-button") ;
 addGlow(".resume", "card") ;

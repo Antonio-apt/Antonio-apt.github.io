@@ -13,7 +13,7 @@ function init() {
   initialRotation = camera.rotation.clone();
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
-  document.querySelector('.about-me').appendChild(renderer.domElement);
+  document.querySelector('main').appendChild(renderer.domElement);
 
   starGeo = new THREE.BufferGeometry();
   const positions = [];
@@ -39,7 +39,7 @@ function init() {
 
   window.addEventListener('resize', onWindowResize, false);
 
-  document.querySelector('.about-me').addEventListener('mousemove', onMouseMove, false);
+  document.querySelector('main').addEventListener('mousemove', onMouseMove, false);
 
   animate();
 }
