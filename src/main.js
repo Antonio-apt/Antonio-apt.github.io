@@ -2,31 +2,14 @@ import './scss/main.scss';
 import LocomotiveScroll from 'locomotive-scroll';
 import initTranslations from './scripts/i18n';
 import init from './scripts/star';
+import addGlow from './scripts/glow'
 
 
 const { BASE_URL } = import.meta.env
 
-document.querySelector(".header__actions").onmousemove = e => {
-  for(const button of document.getElementsByClassName("lang-button")) {
-    const rect = button.getBoundingClientRect(),
-          x = e.clientX - rect.left,
-          y = e.clientY - rect.top;
 
-          button.style.setProperty("--mouse-x", `${x}px`);
-          button.style.setProperty("--mouse-y", `${y}px`);
-  };
-}
-
-document.querySelector(".resume").onmousemove = e => {
-  for(const button of document.getElementsByClassName("card")) {
-    const rect = button.getBoundingClientRect(),
-          x = e.clientX - rect.left,
-          y = e.clientY - rect.top;
-
-          button.style.setProperty("--mouse-x", `${x}px`);
-          button.style.setProperty("--mouse-y", `${y}px`);
-  };
-}
+addGlow(".header__actions", "lang-button") ;
+addGlow(".resume", "card") ;
 
 (() => {
   const container = document.querySelector('.about-me__container');
