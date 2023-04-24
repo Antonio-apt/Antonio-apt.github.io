@@ -1,4 +1,4 @@
-import './scss/main.scss';
+import './styles/main.scss';
 import LocomotiveScroll from 'locomotive-scroll';
 import initTranslations from './scripts/i18n';
 import init from './scripts/star';
