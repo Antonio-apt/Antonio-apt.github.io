@@ -12,6 +12,8 @@ $clr-yellow: #F8C269;
 $white: #FFFFFF;
 $black: #272727;
 
+
+//Structure from locomotive.js: https://github.com/locomotivemtl/locomotive-scroll
 // Typefaces
 // =============================================================================
 $font-sans-serif: Arial, sans-serif;
@@ -20,7 +22,7 @@ $font-sans-serif: Arial, sans-serif;
 // =============================================================================
 // Base
 $font-size:   16px;
-$line-height: 24px / $font-size;
+$line-height: calc(24px / $font-size);
 $font-family: $font-sans-serif;
 $color:       #222222;
 $font-neue-montreal: 'Neue Montreal';
@@ -32,6 +34,7 @@ $font-size-h4:  16px  !default;
 $font-size-h5:  16px  !default;
 $font-size-h6:  15px  !default;
 $line-height-h: $line-height;
+
 // Weights
 $light:  300;
 $normal: 400;

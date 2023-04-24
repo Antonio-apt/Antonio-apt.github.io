@@ -30,7 +30,7 @@
       border-radius: 7px;
       cursor: pointer;
       &.selected {
-        background-color: rgba(120, 120, 120, 0.8);
+        background-color: rgb(49, 123, 243, 0.8);
       }
       &::before {
         background: radial-gradient(
@@ -74,3 +74,4 @@
     }
   }
 }
+
