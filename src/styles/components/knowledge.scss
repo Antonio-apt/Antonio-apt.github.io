@@ -1,3 +1,86 @@
-#knowledge {
-  background-image: linear-gradient($bg-knowledge, $bg-footer);
+$container-width: 1440px;
+
+.knowledge {
+  position: relative;
+  $self: &;
+  &__container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: rem($container-width + (40px * 2));
+
+    @media (max-width: $to-small) {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    @media (min-width: $from-small) {
+      padding-right: rem(40px);
+      padding-left: rem(40px);
+    }
+    #{ $self }__direction-block_wrapper {
+      margin-bottom: rem(500px);
+      margin-top: rem(500px);
+      #{ $self }__direction-block {
+        position: absolute;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        top: -2vh;
+        bottom: -50vh;
+
+        @media (min-width: $from-small) and (max-width: $to-large) {
+          top: -30vh;
+          bottom: -50vh;
+        }
+        @media (max-width: $to-small) {
+          top: -15vh;
+          bottom: 0;
+        }
+
+        @media (min-width: $from-medium) and (max-width: $to-large) {
+          margin-top: rem(100px);
+        }
+
+        @media (min-width: $from-large) {
+          margin-top: rem(300px);
+        }
+        #{ $self }__direction-block_item {
+          position: absolute;
+          font-size: 10vw;
+          white-space: nowrap;
+          font-weight: $semi-bold;
+          text-transform: uppercase;
+          line-height: 1;
+
+          span {
+            display: block;
+            color: black;
+            background-color: #ffc512;
+            white-space: nowrap;
+            padding: 0 20px;
+          }
+
+          &.-one {
+            top: 15%;
+            transform: translateX(-50vw) rotate(26deg);
+          }
+          &.-two {
+            top: 30%;
+          }
+          &.-three {
+            top: 60%;
+            transform: rotate(9deg);
+          }
+          &.-four {
+            top: 70%;
+            transform: translateX(-50vw) rotate(-19deg);
+          }
+          &.-five {
+            top: 73%;
+            transform: translateX(-10vw) rotate(5deg);
+          }
+        }
+      }
+    }
+  }
 }

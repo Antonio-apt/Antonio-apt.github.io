@@ -75,8 +75,26 @@ const scroll = new LocomotiveScroll({
   smooth: true,
   mobile: {
     smooth: true
+  },
+  tablet: {
+      smooth: true,
+      breakpoint: 0, 
   }
 });
+
+// if(document.querySelector('[data-scroll-container]').getAttribute('data-horizontal') == 'true') {
+//   options.direction = 'horizontal';
+//   options.gestureDirection = 'both';
+//   options.tablet = {
+//       smooth: true,
+//       direction: 'horizontal',
+//       horizontalGesture: true
+//   }
+//   options.smartphone = {
+//       smooth: false
+//   }
+//   options.reloadOnContextChange = true
+// }
 
 
 initTranslations();
