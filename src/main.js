@@ -1,17 +1,17 @@
-import './styles/main.scss';
-import LocomotiveScroll from 'locomotive-scroll';
-import initTranslations from './scripts/i18n';
-import init from './scripts/star';
-import addGlow from './scripts/glow'
+import "./styles/main.scss";
+import LocomotiveScroll from "locomotive-scroll";
+import initTranslations from "./scripts/i18n";
+import init from "./scripts/star";
+import addGlow from "./scripts/glow";
 
-const { BASE_URL } = import.meta.env
+const { BASE_URL } = import.meta.env;
 
-addGlow(".header__actions", "lang-button") ;
-addGlow(".resume", "card") ;
+addGlow(".header__actions", "lang-button");
+addGlow(".resume", "card");
 
 (() => {
-  const container = document.querySelector('.about-me__container');
-  const inner = document.querySelector('.about-me__name');
+  const container = document.querySelector(".about-me__container");
+  const inner = document.querySelector(".about-me__name");
   const mouse = {
     _x: 0,
     _y: 0,
@@ -37,19 +37,19 @@ addGlow(".resume", "card") ;
   const updateRate = 10;
   const isTimeToUpdate = () => counter++ % updateRate === 0;
 
-  const onMouseEnterHandler = event => update(event);
+  const onMouseEnterHandler = (event) => update(event);
 
   const onMouseLeaveHandler = () => {
-    inner.style = '';
+    inner.style = "";
   };
 
-  const onMouseMoveHandler = event => {
+  const onMouseMoveHandler = (event) => {
     if (isTimeToUpdate()) {
       update(event);
     }
   };
 
-  const update = event => {
+  const update = (event) => {
     mouse.updatePosition(event);
     const { offsetWidth, offsetHeight } = inner;
     const x = (mouse.y / offsetHeight / 2).toFixed(2);
@@ -57,7 +57,7 @@ addGlow(".resume", "card") ;
     updateTransformStyle(`rotateX(${x}deg) rotateY(${y}deg)`);
   };
 
-  const updateTransformStyle = style => {
+  const updateTransformStyle = (style) => {
     inner.style.transform = style;
     inner.style.webkitTransform = style;
     inner.style.mozTransform = style;
@@ -65,37 +65,46 @@ addGlow(".resume", "card") ;
     inner.style.oTransform = style;
   };
 
-  container.addEventListener('mouseenter', onMouseEnterHandler);
-  container.addEventListener('mouseleave', onMouseLeaveHandler);
-  container.addEventListener('mousemove', onMouseMoveHandler);
+  container.addEventListener("mouseenter", onMouseEnterHandler);
+  container.addEventListener("mouseleave", onMouseLeaveHandler);
+  container.addEventListener("mousemove", onMouseMoveHandler);
 })();
 
-const scroll = new LocomotiveScroll({
-  el: document.querySelector('[data-scroll-container]'),
+const sidebar = document.querySelector(".sidebar");
+
+const scrollOptions = {
+  el: document.querySelector("[data-scroll-container]"),
   smooth: true,
   mobile: {
-    smooth: true
+    smooth: true,
   },
   tablet: {
-      smooth: true,
-      breakpoint: 0, 
+    smooth: true,
+    breakpoint: 0,
+  },
+};
+
+let scroll = new LocomotiveScroll(scrollOptions);
+
+const setDataScroll = () => {
+  if (window.innerWidth < 1000) {
+    sidebar.removeAttribute("data-scroll");
+    sidebar.removeAttribute("data-scroll-sticky");
+    sidebar.removeAttribute("data-scroll-target");
+    sidebar.removeAttribute("data-scroll-offset");
+    sidebar.removeAttribute("style");
+    scroll.destroy();
+    scroll = new LocomotiveScroll(scrollOptions);
+    return;
   }
-});
+  sidebar.setAttribute("data-scroll", "");
+  sidebar.setAttribute("data-scroll-sticky", "");
+  sidebar.setAttribute("data-scroll-target", ".resume");
+  sidebar.setAttribute("data-scroll-offset", "-20, 48");
+};
 
-// if(document.querySelector('[data-scroll-container]').getAttribute('data-horizontal') == 'true') {
-//   options.direction = 'horizontal';
-//   options.gestureDirection = 'both';
-//   options.tablet = {
-//       smooth: true,
-//       direction: 'horizontal',
-//       horizontalGesture: true
-//   }
-//   options.smartphone = {
-//       smooth: false
-//   }
-//   options.reloadOnContextChange = true
-// }
-
+setDataScroll();
+window.addEventListener("resize", setDataScroll);
 
 initTranslations();
 init();

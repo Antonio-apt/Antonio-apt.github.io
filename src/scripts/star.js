@@ -8,7 +8,6 @@ function init() {
   camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
 
   camera.position.z = 1;
-  // camera.rotation.x = Math.PI / 2;
 
   initialRotation = camera.rotation.clone();
   renderer = new THREE.WebGLRenderer();
@@ -40,25 +39,33 @@ function init() {
   window.addEventListener('resize', onWindowResize, false);
 
   document.querySelector('main').addEventListener('mousemove', onMouseMove, false);
+  document.querySelector('main').addEventListener('touchmove', onTouchMove, false);
 
   animate();
 }
 
-function onWindowResize() {
+function onWindowResize(event) {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
-function onMouseMove(event) {
-  const mouseX = event.clientX / window.innerWidth; 
-  const mouseY = event.clientY / window.innerHeight; 
-
-  camera.position.x = (mouseX - 0.5) * 0.5; 
-  camera.position.y = (0.5 - mouseY) * 0.5; 
-  // camera.rotation.x = Math.PI / 2;
-
+function setCameraPosition(event) {
+  const normalizedX = event.clientX / window.innerWidth - 0.5; 
+  const normalizedY = 0.5 - event.clientY / window.innerHeight;
+  camera.position.x = normalizedX * 0.5; 
+  camera.position.y = normalizedY * 0.5; 
   camera.lookAt(scene.position);
+}
+
+function onMouseMove(event) {
+  event.preventDefault();
+  setCameraPosition(event);
+}
+
+function onTouchMove(event) {
+  event.preventDefault();
+  setCameraPosition(event.touches[0]);
 }
 
 function animate() {
