@@ -2,11 +2,27 @@
   "en": {
     "hello": "Hi, I'm",
     "construction": "In construction 🚧",
-    "location": "Location"
+    "location": "Location",
+    "resume": "Resume",
+    "education": "Education",
+    "experience": "Experience",
+    "additional-education": "Additional education/tranning",
+    "madeinweb-1": "MadeinWeb is a company specialized in web and mobile solutions development, with a focus on achieving tangible results for clients. It was there that I gained my first experience right after completing my technical course. My responsibilities involved conducting tests, monitoring project progress, and collaborating with clients to understand and filter their demands. Working in synergy with cross-functional teams, I absorbed valuable insights into best practices and the key tools utilized by each domain, which proved to be fundamental for the outset of my career.",
+    "madeinweb-1-date": "January 2020 - November 2020",
+    "madeinweb-2": "Roughly a year later, I transitioned into the development field and worked as a Front-End developer on over 5 projects catering to medium and large-sized enterprises. I employed frameworks such as Vue, React, and Angular, adhering to the best practices in interface development. I collaborated with cross-functional teams, maintaining close communication with Back-End and Design teams, and also engaged with AWS for cloud computing solutions.",
+    "madeinweb-2-date": "November 2020 - August 2021"
   },
   "pt": {
     "hello": "Ola, Eu sou o",
     "construction": "Em construção 🚧",
-    "location": "Localização"
+    "location": "Localização",
+    "resume": "Currículo",
+    "education": "Educação",
+    "experience": "Experiência",
+    "additional-education": "Cursos e certificações",
+    "madeinweb-1": "A MadeinWeb é uma empresa especializada no desenvolvimento de soluções web e mobile, com ênfase em alcançar resultados concretos para os clientes. Foi lá que obtive minha primeira experiência logo após concluir meu curso técnico. Minhas responsabilidades envolviam a realização de testes, o acompanhamento do progresso dos projetos e a colaboração com os clientes para compreender e filtrar suas demandas. Trabalhando em conjunto com equipes multidisciplinares, absorvi conhecimentos valiosos sobre boas práticas e as principais ferramentas utilizadas por cada área, o que se revelou fundamental para o início da minha carreira.",
+    "madeinweb-1-date": "Janeiro 2020 - Novembro 2020",
+    "madeinweb-2": "Após cerca de um ano, migrei para o campo do desenvolvimento e atuei como desenvolvedor Front-End em mais de 5 projetos para empresas de médio e grande porte. Utilizei frameworks como Vue, React e Angular, aderindo às melhores práticas de desenvolvimento de interface. Colaborei com equipes multidisciplinares, mantendo contato próximo com times de Back-End, Design e trabalhando também com AWS para computação em nuvem.",
+    "madeinweb-2-date": "Novembro 2020 - Agosto 2021"
   }
 }

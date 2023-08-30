@@ -233,9 +233,17 @@
       }
       .timeline-list {
         .timeline-item {
+          display: flex;
+          flex-direction: column;
+          gap: 0.2em;
           margin-left: 35px;
           list-style: none;
           position: relative;
+          &__title{
+            .company-name {
+              color: #fccc3b;
+            }
+          }
           &:not(:last-child) {
             margin-bottom: 20px;
           }
