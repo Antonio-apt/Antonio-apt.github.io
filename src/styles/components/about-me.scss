@@ -37,6 +37,22 @@
     #{ $self }__text {
       color: #ffc512;
       margin-left: 1rem;
+      &:last-child {
+        display: flex;
+        justify-content: space-between;
+        .social-main {
+          display: flex;
+          align-items: end;
+          gap: 1rem;
+          margin-right: 4rem;
+          &__link {
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+          }
+        }
+
+      }
       @media (max-width: $to-small) {
         font-size: 2em;
       }
