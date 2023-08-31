@@ -10,7 +10,12 @@
     "madeinweb-1": "MadeinWeb is a company specialized in web and mobile solutions development, with a focus on achieving tangible results for clients. It was there that I gained my first experience right after completing my technical course. My responsibilities involved conducting tests, monitoring project progress, and collaborating with clients to understand and filter their demands. Working in synergy with cross-functional teams, I absorbed valuable insights into best practices and the key tools utilized by each domain, which proved to be fundamental for the outset of my career.",
     "madeinweb-1-date": "January 2020 - November 2020",
     "madeinweb-2": "Roughly a year later, I transitioned into the development field and worked as a Front-End developer on over 5 projects catering to medium and large-sized enterprises. I employed frameworks such as Vue, React, and Angular, adhering to the best practices in interface development. I collaborated with cross-functional teams, maintaining close communication with Back-End and Design teams, and also engaged with AWS for cloud computing solutions.",
-    "madeinweb-2-date": "November 2020 - August 2021"
+    "madeinweb-2-date": "November 2020 - August 2021",
+    "scipopulis": "Scipopulis specializes in smart cities and urban mobility. I served as a Full-Stack Developer, spearheading a Meteor.js project. I revitalized the architecture, embracing an event-driven API with WebSockets, enhancing performance while minimizing redundancy. I upgraded the front-end to Vue.js, ensuring real-time data.",
+    "scipopulis-date": "August 2021 - March 2022",
+    "compass": "At Compass, part of the Oul group and specializes in delivering high-quality digital experiences, service integration, and solutions, I work as a Web Developer. Currently engaged in a project for Vivo. My approach aligns with agile methodologies, ensuring quality through testing and collaboration with specialized teams. Furthermore, I provide support and develop solutions within the Adobe Experience Manager (AEM) environment, including integrations with external systems, while overseeing the development of essential components and services. I also utilize Java and Vue.js.",
+    "compass-date": "March 2022 - Present",
+    "usp": ""
   },
   "pt": {
     "hello": "Ola, Eu sou o",
@@ -23,6 +28,11 @@
     "madeinweb-1": "A MadeinWeb é uma empresa especializada no desenvolvimento de soluções web e mobile, com ênfase em alcançar resultados concretos para os clientes. Foi lá que obtive minha primeira experiência logo após concluir meu curso técnico. Minhas responsabilidades envolviam a realização de testes, o acompanhamento do progresso dos projetos e a colaboração com os clientes para compreender e filtrar suas demandas. Trabalhando em conjunto com equipes multidisciplinares, absorvi conhecimentos valiosos sobre boas práticas e as principais ferramentas utilizadas por cada área, o que se revelou fundamental para o início da minha carreira.",
     "madeinweb-1-date": "Janeiro 2020 - Novembro 2020",
     "madeinweb-2": "Após cerca de um ano, migrei para o campo do desenvolvimento e atuei como desenvolvedor Front-End em mais de 5 projetos para empresas de médio e grande porte. Utilizei frameworks como Vue, React e Angular, aderindo às melhores práticas de desenvolvimento de interface. Colaborei com equipes multidisciplinares, mantendo contato próximo com times de Back-End, Design e trabalhando também com AWS para computação em nuvem.",
-    "madeinweb-2-date": "Novembro 2020 - Agosto 2021"
+    "madeinweb-2-date": "Novembro 2020 - Agosto 2021",
+    "scipopulis": "A Scipopulis foca em cidades inteligentes e mobilidade urbana. Fui Desenvolvedor Full-Stack, liderando um projeto em Meteor.js. Revitalizei a arquitetura, adotando uma API orientada a eventos com WebSockets, impulsionando o desempenho e reduzindo redundâncias. Atualizei o front-end para Vue.js, assegurando dados em tempo real.",
+    "scipopulis-date": "Agosto 2021 - Março 2022",
+    "compass": "Na Compass, uma empresa do grupo Oul focada em experiência digital, atuo como Desenvolvedor Web. Atualmente, estou engajado em um projeto para a Vivo. Minha abordagem adere às metodologias ágeis, assegurando qualidade por meio de testes e colaboração com equipes especializadas. Adicionalmente, ofereço suporte e desenvolvimento de soluções no ambiente Adobe Experience Manager (AEM), com integrações em sistemas externos. Paralelamente, supervisiono o desenvolvimento de componentes e serviços essenciais, utilizando tecnologias como Java e Vue.js.",
+    "compass-date": "Março 2022 - o momento"
+
   }
 }

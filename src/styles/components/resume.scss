@@ -205,6 +205,9 @@
     }
     .timeline {
       margin-bottom: 30px;
+      &__title {
+        text-transform: uppercase;
+      }
       .title-wrapper {
         display: flex;
         align-items: center;
