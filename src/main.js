@@ -84,8 +84,21 @@ const scrollOptions = {
   },
 };
 
+let scroll;
+
+const initializeScroll = () => {
+  scroll = new LocomotiveScroll(scrollOptions);
+};
+
+const destroyScroll = () => {
+  if (scroll) {
+    scroll.destroy();
+    scroll = null;
+  }
+};
+
 window.addEventListener("load", () => {
-  let scroll = new LocomotiveScroll(scrollOptions);
+  initializeScroll()
 });
 
 
@@ -96,8 +109,7 @@ const setDataScroll = () => {
     sidebar.removeAttribute("data-scroll-target");
     sidebar.removeAttribute("data-scroll-offset");
     sidebar.removeAttribute("style");
-    // scroll.destroy();
-    scroll = new LocomotiveScroll(scrollOptions);
+    destroyScroll();
     return;
   }
   sidebar.setAttribute("data-scroll", "");
