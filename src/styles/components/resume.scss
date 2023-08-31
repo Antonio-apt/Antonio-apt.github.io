@@ -254,7 +254,11 @@
           &__title{
             .company-name {
               color: #fccc3b;
+              text-decoration: none;
             }
+          }
+          &__text {
+            text-align: justify;
           }
           &:not(:last-child) {
             margin-bottom: 20px;
