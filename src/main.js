@@ -84,7 +84,10 @@ const scrollOptions = {
   },
 };
 
-let scroll = new LocomotiveScroll(scrollOptions);
+window.addEventListener("load", () => {
+  let scroll = new LocomotiveScroll(scrollOptions);
+});
+
 
 const setDataScroll = () => {
   if (window.innerWidth < 1000) {

@@ -1,4 +1,5 @@
 import i18next from "i18next";
+import LocomotiveScroll from "locomotive-scroll";
 
 const loadLanguages = () => {
   return fetch('/languages.json')
