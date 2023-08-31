@@ -96,7 +96,7 @@ const setDataScroll = () => {
     sidebar.removeAttribute("data-scroll-target");
     sidebar.removeAttribute("data-scroll-offset");
     sidebar.removeAttribute("style");
-    scroll.destroy();
+    // scroll.destroy();
     scroll = new LocomotiveScroll(scrollOptions);
     return;
   }
