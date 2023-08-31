@@ -242,6 +242,15 @@
           margin-left: 35px;
           list-style: none;
           position: relative;
+          .badge {
+            text-decoration: none;
+            width: 100px;
+            height: 100px;
+            &__image {
+              width: inherit;
+              height: inherit;
+            }
+          }
           &__title{
             .company-name {
               color: #fccc3b;
