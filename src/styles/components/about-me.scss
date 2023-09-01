@@ -35,8 +35,10 @@
       }
     }
     #{ $self }__text {
-      color: #ffc512;
+      color: transparent;
       margin-left: 1rem;
+      -webkit-text-stroke-width: 0.5px;
+     -webkit-text-stroke-color: #ffc512;
       &:last-child {
         display: flex;
         justify-content: space-between;
@@ -55,7 +57,7 @@
 
       }
       @media (max-width: $to-small) {
-        font-size: 2em;
+        font-size: 3em;
       }
 
       @media (min-width: $from-small) and (max-width: $to-medium) {
