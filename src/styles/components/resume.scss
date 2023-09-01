@@ -238,7 +238,7 @@
         .timeline-item {
           display: flex;
           flex-direction: column;
-          gap: 0.2em;
+          gap: 0.3em;
           margin-left: 35px;
           list-style: none;
           position: relative;
@@ -261,7 +261,7 @@
             text-align: justify;
           }
           &:not(:last-child) {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
           }
           &:not(:last-child)::before {
             content: "";
@@ -269,7 +269,7 @@
             top: -25px;
             left: -50px;
             width: 1px;
-            height: calc(100% + 50px);
+            height: calc(100% + 65px);
             background: #fccc3b;
           }
           &::after {
