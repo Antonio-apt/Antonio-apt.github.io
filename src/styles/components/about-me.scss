@@ -40,6 +40,7 @@
       &:last-child {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         .social-main {
           display: flex;
           align-items: end;
