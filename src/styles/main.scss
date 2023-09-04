@@ -7,6 +7,7 @@
 @import "./components/knowledge.scss";
 @import "./components/footer.scss";
 @import "./components/section.scss";
+@import "./components/stack.scss";
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @font-face {
   font-family: "Neue Montreal";
@@ -22,9 +23,9 @@
 }
 
 html {
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
   scroll-behavior: smooth;
   body {
     font-family: "General Sans", sans-serif;
@@ -49,6 +50,12 @@ html {
       cursor: pointer;
       outline: inherit;
     }
+    // main {
+    //   min-height: 100vh;
+    //   position: relative;
+    //   z-index: 1;
+    //   // margin-bottom: 100vh
+    // }
   }
 
   @media (max-width: $to-small) {

@@ -25,15 +25,15 @@ $container-width: 1440px;
         right: 0;
         left: 0;
         z-index: 1;
-        top: -2vh;
-        bottom: -50vh;
+        top: -2dvh;
+        bottom: -50dvh;
 
         @media (min-width: $from-small) and (max-width: $to-large) {
-          top: -30vh;
-          bottom: -50vh;
+          top: -30dvh;
+          bottom: -50dvh;
         }
         @media (max-width: $to-small) {
-          top: -15vh;
+          top: -15dvh;
           bottom: 0;
         }
 

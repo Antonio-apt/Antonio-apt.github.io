@@ -1,0 +1,93 @@
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes reverse-slide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.stack {
+  overflow: hidden;
+  white-space: nowrap;
+  .separator {
+    height: 1px;
+    border-radius: 2px;
+    margin: 30px 0;
+    width: 100%;
+    background: #ffc512;
+  }
+  .carrousel {
+    $self: &;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    
+    &::after, &::before {
+      position: absolute;
+      top: 0;
+      width: 100px;
+      height: 100%;
+      content: "";
+      z-index: 2;
+    }
+    &::before {
+      left: 0;
+      background: linear-gradient(to left, rgba(255, 255, 255, 0), black);
+    }
+    &::after {
+      right: 0;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
+    }
+    &__stack {
+      user-select: none;
+      pointer-events: none;
+      cursor: default;
+      display: inline-block;
+      animation: 35s slide infinite linear;
+      text-transform: uppercase;
+      font-size: 7em;
+    }
+    // &.reverse {
+    //   display: flex;
+    //   flex-direction: row-reverse;
+    //   #{ $self }__stack {
+    //     color: aqua;
+    //     animation: 35s reverse-slide infinite linear;
+    //   }
+    // }
+  }
+  .stack-list {
+    display: grid;
+	  grid-template-columns: 50% 50%;
+    height: 100vh;
+    padding: 1rem;
+    .stack-icons {
+      background-color: #ffc512;
+      &__header {
+        display: flex;
+        color: black;
+        font-weight: normal;
+        padding: 1rem;
+        text-transform: uppercase;
+      }
+      .separator {
+        background: black;
+        margin: 0;
+      }
+    }
+    .stack-description {
+      text-align: justify;
+      white-space: wrap;
+      padding: 3rem;
+    }
+  }
+}

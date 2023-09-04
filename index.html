@@ -14,11 +14,13 @@
   <body>
     <header class="header">
       <div class="header__actions">
-        <h3 data-i18n="construction" class="header__title">in construction 🚧</h3>
+        <h3 data-i18n="construction" class="header__title">
+          in construction 🚧
+        </h3>
         <nav class="header__page-links">
           <a href="#about-me">About-me</a>
           <a href="#stack">Stack</a>
-          <a href="#resume">Resume</a> 
+          <a href="#resume">Resume</a>
         </nav>
         <div class="header__translate-section">
           <button class="lang-button" data-locale="pt">
@@ -36,12 +38,7 @@
         </div>
       </div>
     </header>
-    <main
-      data-scroll-container
-      data-scroll
-      data-scroll-sticky
-      id="scroll-container"
-    >
+    <main id="scroll-container">
       <section class="about-me" data-scroll-section>
         <div class="about-me__container">
           <h2 data-i18n="hello" class="about-me__text"></h2>
@@ -74,7 +71,109 @@
           </h2>
         </div>
       </section>
+      <section class="stack">
+        <div class="separator"></div>
+        <div class="carrousel">
+          <p class="carrousel__stack">
+            <span>Javascript - </span>
+            <span>AWS - </span>
+            <span>Python - </span>
+            <span>kubernetes - </span>
+            <span>Go - </span>
+            <span>Docker - </span>
+            <span>Node - </span>
+            <span>Typescript - </span>
+          </p>
+          <p class="carrousel__stack">
+            <span>Javascript - </span>
+            <span>AWS - </span>
+            <span>Python - </span>
+            <span>kubernetes - </span>
+            <span>Go - </span>
+            <span>Docker - </span>
+            <span>Node - </span>
+            <span>Typescript - </span>
+          </p>
+        </div>
+        <div class="separator"></div>
 
+        <div class="carrousel reverse">
+          <p class="carrousel__stack">
+            <span>Typescript - </span>
+            <span>Python - </span>
+            <span>Docker - </span>
+            <span>Go - </span>
+            <span>Node - </span>
+            <span>kubernetes - </span>
+            <span>Javascript - </span>
+            <span>AWS - </span>
+            <span>Java - </span>
+          </p>
+          <p class="carrousel__stack">
+            <span>Typescript - </span>
+            <span>Python - </span>
+            <span>Docker - </span>
+            <span>Go - </span>
+            <span>Node - </span>
+            <span>kubernetes - </span>
+            <span>Javascript - </span>
+            <span>AWS - </span>
+            <span>Java - </span>
+          </p>
+        </div>
+        <div class="separator"></div>
+
+        <div class="carrousel">
+          <p class="carrousel__stack">
+            <span>AWS - </span>
+            <span>Javascript - </span>
+            <span>Typescript - </span>
+            <span>Python - </span>
+            <span>Docker - </span>
+            <span>Go - </span>
+            <span>kubernetes - </span>
+            <span>Node - </span>
+            <span>AWS - </span>
+            <span>Meteor.js - </span>
+          </p>
+          <p class="carrousel__stack">
+            <span>AWS - </span>
+            <span>Javascript - </span>
+            <span>Typescript - </span>
+            <span>Python - </span>
+            <span>Docker - </span>
+            <span>Go - </span>
+            <span>kubernetes - </span>
+            <span>Node - </span>
+            <span>AWS - </span>
+            <span>Meteor.js - </span>
+          </p>
+        </div>
+        <div class="separator"></div>
+
+        <div class="stack-list">
+          <div class="stack-icons">
+            <div class="stack-icons__header">
+              <h2> My Tech Stack</h2>
+            </div>
+            <div class="separator"></div>
+          </div>
+          <div class="stack-description">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+            </p>
+            
+          </div>
+        </div>
+      </section>
       <section class="resume" data-scroll-section>
         <aside
           class="card sidebar"
@@ -357,79 +456,11 @@
           </div>
         </div>
       </section>
-      <!-- <section class="knowledge" data-scroll-section>
-        <div class="knowledge__container" id="scroll-direction">
-          <div class="knowledge__direction-block_wrapper">
-            <div class="knowledge__direction-block" id="direction">
-              <div class="knowledge__direction-block_item -one">
-                <span
-                  class="knowledge__direction-block_item_inner"
-                  data-scroll
-                  data-scroll-direction="horizontal"
-                  data-scroll-speed="6"
-                  data-scroll-target="#direction"
-                >
-                  Javascript - AWS - Vue.js - CSS
-                </span>
-              </div>
-              <div class="knowledge__direction-block_item -two">
-                <span
-                  class="knowledge__direction-block_item_inner"
-                  data-scroll
-                  data-scroll-direction="horizontal"
-                  data-scroll-speed="-8"
-                  data-scroll-target="#direction"
-                  data-scroll-delay="0.08"
-                >
-                  Python - Typescript
-                </span>
-              </div>
-              <div class="knowledge__direction-block_item -three">
-                <span
-                  class="knowledge__direction-block_item_inner"
-                  data-scroll
-                  data-scroll-direction="horizontal"
-                  data-scroll-speed="9"
-                  data-scroll-target="#direction"
-                  data-scroll-delay="0.05"
-                >
-                  React.js - Node.js - SQL
-                </span>
-              </div>
-              <div class="knowledge__direction-block_item -four">
-                <span
-                  class="knowledge__direction-block_item_inner"
-                  data-scroll
-                  data-scroll-direction="horizontal"
-                  data-scroll-speed="15"
-                  data-scroll-target="#direction"
-                >
-                  AEM - Metoer - Nuxt
-                </span>
-              </div>
-              <div class="knowledge__direction-block_item -five">
-                <span
-                  class="knowledge__direction-block_item_inner"
-                  data-scroll
-                  data-scroll-direction="horizontal"
-                  data-scroll-speed="-20"
-                  data-scroll-target="#direction"
-                  data-scroll-delay="0.05"
-                >
-                  AWS - Vue.js
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <section id="footer" data-scroll-section>
-        <div class="footer-bar">
-        </div>
-      </section>
-      <!-- <section id="footer" data-scroll-section>
-    </section> -->
+      <section class="stack"></section>
     </main>
+    <section id="footer">
+      <div class="footer-bar"></div>
+    </section>
     <script type="module" src="./src/main.js"></script>
     <script
       type="module"
