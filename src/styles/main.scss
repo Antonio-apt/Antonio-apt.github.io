@@ -1,7 +1,6 @@
 @import "./_normalize.scss";
 @import "./_variables.scss";
 @import "./_mixins.scss";
-@import "./locomotive.css";
 @import "./components/header.scss";
 @import "./components/about-me.scss";
 @import "./components/resume.scss";
@@ -23,6 +22,9 @@
 }
 
 html {
+  &::-webkit-scrollbar {
+    display: none;
+  }
   scroll-behavior: smooth;
   body {
     font-family: "General Sans", sans-serif;

@@ -23,6 +23,10 @@
     background-color: transparent;
     top: 0.5rem;
     border-radius: 25px;
+    transition: all 0.2s ease-in-out;
+    &.hide {
+      top: -5rem;
+    }
     #{ $self }__title {
       text-transform: uppercase;
       font-size: medium;
@@ -30,11 +34,14 @@
     }
     #{ $self }__page-links {
       display: flex;
-      margin-left: 1.5rem;
+      margin-left: 1.75rem;
       gap: 18px;
       a {
         color: white;
         text-decoration: none;
+        &:hover {
+          color: rgb(159, 159, 159);
+        }
       }
     }
     #{ $self }__translate-section {

@@ -52,6 +52,9 @@
             text-decoration: none;
             color: white;
             font-size: 30px;
+            &:hover {
+              color: rgb(159, 159, 159);
+            }
           }
         }
 
