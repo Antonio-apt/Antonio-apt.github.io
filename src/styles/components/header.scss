@@ -1,34 +1,58 @@
 .header {
+  $self: &;
   position: absolute;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 3rem;
   width: 100%;
   background-color: transparent;
+  border-radius: 25px;
   z-index: 1;
-  &__title {
-    margin-left: 1rem;
-  }
   &__actions {
     position: fixed;
     display: flex;
+    align-items: center;
     margin-right: 2rem;
     gap: 8px;
-    justify-content: flex-end;
-    width: 60%;
+    min-width: 60%;
     height: 2.5rem;
+    padding: 1rem;
+    border: 1px hsla(0,0%,100%,.16) solid;
+    backdrop-filter: blur(10px);
     background-color: transparent;
-    right: 0;
+    top: 0.5rem;
+    border-radius: 25px;
+    #{ $self }__title {
+      text-transform: uppercase;
+      font-size: medium;
+      left: auto;
+    }
+    #{ $self }__page-links {
+      display: flex;
+      margin-left: 1.5rem;
+      gap: 18px;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+    #{ $self }__translate-section {
+      margin-left: auto;
+      height: inherit;
+    }
     &:hover > .lang-button > .lang-button__border{
       opacity: 1;
     }
     .lang-button {
       position: relative;
+      height: inherit;
       width: 6rem;
       background-color: rgba(255, 255, 255, 0.1);
       text-align: center;
-      border-radius: 7px;
+      border-radius: 13px;
       cursor: pointer;
+      backdrop-filter: blur(5px);
       &.selected {
         background-color: #ffc412dd;
       }
