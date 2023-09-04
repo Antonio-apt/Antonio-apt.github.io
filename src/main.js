@@ -6,7 +6,7 @@ import addGlow from "./scripts/glow";
 
 const { BASE_URL } = import.meta.env;
 
-addGlow(".header__actions", "lang-button");
+addGlow(".header__translate-section", "lang-button");
 addGlow(".resume", "card");
 
 (() => {

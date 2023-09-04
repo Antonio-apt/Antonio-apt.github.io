@@ -40,60 +40,60 @@
     #{ $self }__translate-section {
       margin-left: auto;
       height: inherit;
-    }
-    &:hover > .lang-button > .lang-button__border{
-      opacity: 1;
-    }
-    .lang-button {
-      position: relative;
-      height: inherit;
-      width: 6rem;
-      background-color: rgba(255, 255, 255, 0.1);
-      text-align: center;
-      border-radius: 13px;
-      cursor: pointer;
-      backdrop-filter: blur(5px);
-      &.selected {
-        background-color: #ffc412dd;
+      &:hover > .lang-button > .lang-button__border{
+        opacity: 1;
       }
-      &::before {
-        background: radial-gradient(
-          150px circle at var(--mouse-x) var(--mouse-y), 
-          rgba(255, 255, 255, 0.2), 
-          transparent 40%
-        );
-        z-index: 3;
-      }
-      &__border {
-        background: radial-gradient(
-          150px circle at var(--mouse-x) var(--mouse-y), 
-          rgba(181, 164, 11, 0.5), 
-          transparent 40%
-        );
-        z-index: 1;
-      }
-      &::before, &__border {
-        content: "";
-        border-radius: inherit;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        opacity: 0;
-        transition: opacity 500ms;
-        top: 0;
-        width: 100%;
-      }
-      &__text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(23, 23, 23, 0.6);
-        border-radius: inherit;
-        margin: 1px;
-        height: calc(100% - 2px);
-        width: calc(100% - 2px);
+      .lang-button {
         position: relative;
-        z-index: 2;
+        height: inherit;
+        width: 6rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        text-align: center;
+        border-radius: 13px;
+        cursor: pointer;
+        backdrop-filter: blur(5px);
+        &.selected {
+          background-color: #ffc412dd;
+        }
+        &::before {
+          background: radial-gradient(
+            150px circle at var(--mouse-x) var(--mouse-y), 
+            rgba(255, 255, 255, 0.2), 
+            transparent 40%
+          );
+          z-index: 3;
+        }
+        &__border {
+          background: radial-gradient(
+            150px circle at var(--mouse-x) var(--mouse-y), 
+            rgba(181, 164, 11, 0.5), 
+            transparent 40%
+          );
+          z-index: 1;
+        }
+        &::before, &__border {
+          content: "";
+          border-radius: inherit;
+          height: 100%;
+          left: 0;
+          position: absolute;
+          opacity: 0;
+          transition: opacity 500ms;
+          top: 0;
+          width: 100%;
+        }
+        &__text {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgb(23, 23, 23, 0.6);
+          border-radius: inherit;
+          margin: 1px;
+          height: calc(100% - 2px);
+          width: calc(100% - 2px);
+          position: relative;
+          z-index: 2;
+        }
       }
     }
   }
