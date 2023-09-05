@@ -8,6 +8,10 @@
       href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
     <title>Antonio Souza</title>
   </head>
 
@@ -72,122 +76,187 @@
         </div>
       </section>
       <section class="stack">
-        <div class="separator"></div>
-        <div class="carrousel">
-          <p class="carrousel__stack">
-            <span>Javascript - </span>
-            <span>AWS - </span>
-            <span>Python - </span>
-            <span>kubernetes - </span>
-            <span>Go - </span>
-            <span>Docker - </span>
-            <span>Node - </span>
-            <span>Typescript - </span>
-          </p>
-          <p class="carrousel__stack">
-            <span>Javascript - </span>
-            <span>AWS - </span>
-            <span>Python - </span>
-            <span>kubernetes - </span>
-            <span>Go - </span>
-            <span>Docker - </span>
-            <span>Node - </span>
-            <span>Typescript - </span>
-          </p>
+        <div class="carrousels">
+          <div class="separator"></div>
+          <div class="carrousel">
+            <p class="carrousel__stack">
+              <span>Javascript - </span>
+              <span>AWS - </span>
+              <span>Python - </span>
+              <span>kubernetes - </span>
+              <span>Go - </span>
+              <span>Docker - </span>
+              <span>Node - </span>
+              <span>Typescript - </span>
+            </p>
+            <p class="carrousel__stack">
+              <span>Javascript - </span>
+              <span>AWS - </span>
+              <span>Python - </span>
+              <span>kubernetes - </span>
+              <span>Go - </span>
+              <span>Docker - </span>
+              <span>Node - </span>
+              <span>Typescript - </span>
+            </p>
+          </div>
+          <div class="separator"></div>
+          <div class="carrousel reverse">
+            <p class="carrousel__stack">
+              <span>Typescript - </span>
+              <span>Python - </span>
+              <span>Docker - </span>
+              <span>Go - </span>
+              <span>Node - </span>
+              <span>kubernetes - </span>
+              <span>Javascript - </span>
+              <span>AWS - </span>
+              <span>Java - </span>
+            </p>
+            <p class="carrousel__stack">
+              <span>Typescript - </span>
+              <span>Python - </span>
+              <span>Docker - </span>
+              <span>Go - </span>
+              <span>Node - </span>
+              <span>kubernetes - </span>
+              <span>Javascript - </span>
+              <span>AWS - </span>
+              <span>Java - </span>
+            </p>
+          </div>
+          <div class="separator"></div>
+          <div class="carrousel">
+            <p class="carrousel__stack">
+              <span>AWS - </span>
+              <span>Javascript - </span>
+              <span>Typescript - </span>
+              <span>Python - </span>
+              <span>Docker - </span>
+              <span>Go - </span>
+              <span>kubernetes - </span>
+              <span>Node - </span>
+              <span>AWS - </span>
+              <span>Meteor.js - </span>
+            </p>
+            <p class="carrousel__stack">
+              <span>AWS - </span>
+              <span>Javascript - </span>
+              <span>Typescript - </span>
+              <span>Python - </span>
+              <span>Docker - </span>
+              <span>Go - </span>
+              <span>kubernetes - </span>
+              <span>Node - </span>
+              <span>AWS - </span>
+              <span>Meteor.js - </span>
+            </p>
+          </div>
+          <div class="separator"></div>
         </div>
-        <div class="separator"></div>
-
-        <div class="carrousel reverse">
-          <p class="carrousel__stack">
-            <span>Typescript - </span>
-            <span>Python - </span>
-            <span>Docker - </span>
-            <span>Go - </span>
-            <span>Node - </span>
-            <span>kubernetes - </span>
-            <span>Javascript - </span>
-            <span>AWS - </span>
-            <span>Java - </span>
-          </p>
-          <p class="carrousel__stack">
-            <span>Typescript - </span>
-            <span>Python - </span>
-            <span>Docker - </span>
-            <span>Go - </span>
-            <span>Node - </span>
-            <span>kubernetes - </span>
-            <span>Javascript - </span>
-            <span>AWS - </span>
-            <span>Java - </span>
-          </p>
-        </div>
-        <div class="separator"></div>
-
-        <div class="carrousel">
-          <p class="carrousel__stack">
-            <span>AWS - </span>
-            <span>Javascript - </span>
-            <span>Typescript - </span>
-            <span>Python - </span>
-            <span>Docker - </span>
-            <span>Go - </span>
-            <span>kubernetes - </span>
-            <span>Node - </span>
-            <span>AWS - </span>
-            <span>Meteor.js - </span>
-          </p>
-          <p class="carrousel__stack">
-            <span>AWS - </span>
-            <span>Javascript - </span>
-            <span>Typescript - </span>
-            <span>Python - </span>
-            <span>Docker - </span>
-            <span>Go - </span>
-            <span>kubernetes - </span>
-            <span>Node - </span>
-            <span>AWS - </span>
-            <span>Meteor.js - </span>
-          </p>
-        </div>
-        <div class="separator"></div>
-
-        <div class="stack-list">
+        <div class="stack-list" id="stack">
           <div class="stack-icons">
             <div class="stack-icons__header">
-              <h2> My Tech Stack</h2>
+              <h2>My Tech Stack</h2>
             </div>
             <div class="separator"></div>
+            <div class="stack-icons__items">
+              <div class="stack-icons__item">
+                <i class="devicon-javascript-plain icon colored"></i>
+                <span class="icon-label"> Javascript </span>
+              </div>
+              <div class="stack-icons__item">
+                <i class="devicon-typescript-plain icon colored"></i>
+                <span class="icon-label"> Typescript </span>
+              </div>
+              <div class="stack-icons__item">
+                <i class="devicon-python-plain icon colored"></i>
+                <span class="icon-label"> Python </span>
+              </div>
+              <div class="stack-icons__item">
+                <i class="devicon-vuejs-plain icon colored"></i>
+                <span class="icon-label"> Vue.js </span>
+              </div>
+              <div class="stack-icons__item">
+                <i class="devicon-react-original icon colored"></i>
+                <span class="icon-label"> React.js </span>
+              </div>
+              <div class="stack-icons__item">
+                <i class="devicon-angularjs-plain colored icon"></i>
+                <span class="icon-label"> Angular </span>
+              </div>
+              <div class="stack-icons__item">
+                <i class="devicon-java-plain icon colored"></i>
+                <span class="icon-label"> Java </span>
+              </div>
+              <div class="stack-icons__item">
+                <i class="devicon-go-original-wordmark icon colored"></i>
+                <span class="icon-label"> Go </span>
+              </div>
+              <div class="stack-icons__item">
+                <i class="devicon-amazonwebservices-original icon colored"></i>
+                <span class="icon-label"> AWS </span>
+              </div>
+              <div class="stack-icons__item">
+                <i class="devicon-mongodb-plain icon colored"></i>
+                <span class="icon-label"> MongoDB </span>
+              </div>
+              <div class="stack-icons__item">
+                <i class="devicon-postgresql-plain icon colored"></i>
+                <span class="icon-label"> PostgreSQL </span>
+              </div>
+              <div class="stack-icons__item">
+                <i class="devicon-mysql-plain icon colored"></i>
+                <span class="icon-label"> mysql </span>
+              </div>
+              <div class="stack-icons__item">
+                <i class="devicon-nextjs-original icon"></i>
+                <span class="icon-label"> Next.js </span>
+              </div>
+              <div class="stack-icons__item">
+                <i class="devicon-nuxtjs-plain icon colored"></i>
+                <span class="icon-label"> Nuxt.js </span>
+              </div>
+              <div class="stack-icons__item">
+                <i class="devicon-kubernetes-plain icon colored"></i>
+                <span class="icon-label"> kubernetes </span>
+              </div>
+              <div class="stack-icons__item">
+                <i class="devicon-sass-original icon colored"></i>
+                <span class="icon-label"> Sass </span>
+              </div>
+              <div class="stack-icons__item">
+                <i class="devicon-docker-plain icon colored"></i>
+                <span class="icon-label"> Docker </span>
+              </div>
+              <div class="stack-icons__item">
+                <i class="devicon-meteor-plain icon colored"></i>
+                <span class="icon-label"> Meteor.js </span>
+              </div>
+            </div>
           </div>
           <div class="stack-description">
-            <p>
+            <h2 class="stack-description__title">Programming experience</h2>
+            <p class="stack-description__main-text">
               Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
             </p>
-            
           </div>
         </div>
       </section>
       <section class="resume" data-scroll-section>
-        <aside
-          class="card sidebar"
-          data-scroll
-          data-scroll-sticky
-          data-scroll-target=".resume"
-          data-scroll-offset="-20"
-        >
+        <aside class="card sidebar">
           <div class="card__border"></div>
           <div class="card__content">
             <div class="sidebar__header">
-              <!-- <div class="sidebar__photo">
-
-              </div> -->
               <h1 class="sidebar__name" title="Antonio Souza">Antonio Souza</h1>
 
               <p class="sidebar__title">Fullstack developer</p>

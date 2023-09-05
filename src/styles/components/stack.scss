@@ -1,4 +1,3 @@
-
 @keyframes slide {
   from {
     transform: translateX(0);
@@ -24,70 +23,127 @@
     margin: 30px 0;
     width: 100%;
     background: #ffc512;
+    will-change: transform;
   }
-  .carrousel {
-    $self: &;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    
-    &::after, &::before {
-      position: absolute;
-      top: 0;
-      width: 100px;
-      height: 100%;
-      content: "";
-      z-index: 2;
+  .carrousels {
+    position: sticky;
+    top: 20dvh;
+    will-change: transform;
+    font-size: 5em;
+    transform: scale(1, 1.5);
+    .carrousel {
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      transform: scale(1.5, 1);
+      will-change: transform;
+      &::after,
+      &::before {
+        position: absolute;
+        top: 0;
+        width: 100px;
+        height: 100%;
+        content: "";
+        z-index: 2;
+      }
+      &::before {
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), black);
+      }
+      &::after {
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
+      }
+      &__stack {
+        user-select: none;
+        pointer-events: none;
+        cursor: default;
+        display: inline-block;
+        animation: 35s slide infinite linear;
+        text-transform: uppercase;
+        font-size: inherit;
+      }
     }
-    &::before {
-      left: 0;
-      background: linear-gradient(to left, rgba(255, 255, 255, 0), black);
-    }
-    &::after {
-      right: 0;
-      background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
-    }
-    &__stack {
-      user-select: none;
-      pointer-events: none;
-      cursor: default;
-      display: inline-block;
-      animation: 35s slide infinite linear;
-      text-transform: uppercase;
-      font-size: 7em;
-    }
-    // &.reverse {
-    //   display: flex;
-    //   flex-direction: row-reverse;
-    //   #{ $self }__stack {
-    //     color: aqua;
-    //     animation: 35s reverse-slide infinite linear;
-    //   }
-    // }
   }
   .stack-list {
     display: grid;
-	  grid-template-columns: 50% 50%;
+    grid-template-columns: 50% 50%;
     height: 100vh;
     padding: 1rem;
+    margin-top: 20dvh;
     .stack-icons {
-      background-color: #ffc512;
+      $self: &;
+      position: relative;
+      border: 1px solid white;
+      backdrop-filter: blur(3px);
       &__header {
         display: flex;
-        color: black;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
         font-weight: normal;
-        padding: 1rem;
+        padding: 1rem 5rem;
         text-transform: uppercase;
+        font-size: 2em;
       }
       .separator {
-        background: black;
+        background: white;
         margin: 0;
+      }
+      &__items {
+        color: black;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px 0px;
+        padding: 3rem 2rem;
+        .stack-icons__item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+          .icon {
+            font-size: 3em;
+            &:not(.colored) {
+              color: white;
+            }
+          }
+          .icon-label {
+            color: white;
+            text-transform: uppercase;
+            font-size: 0.7em;
+          }
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        right: -8px;
+        bottom: -8px;
+        z-index: -1;
       }
     }
     .stack-description {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       text-align: justify;
       white-space: wrap;
-      padding: 3rem;
+      padding: 4rem;
+      margin: 2rem;
+      max-height: 50dvh;
+      color: black;
+      background-color: #ffc512;
+      will-change: transform;
+      transition: 0.5s ease transform;
+      &__title {
+        align-self:  end;
+      }
+      &__main-text {
+        padding-top: 3rem;
+      }
     }
   }
 }
