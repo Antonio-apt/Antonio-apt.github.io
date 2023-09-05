@@ -1,0 +1,48 @@
+.card {
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.060);
+  border-radius: 7px;
+  &:hover > .card__border {
+    opacity: 1;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+  &::before {
+    background: radial-gradient(
+      2500px circle at var(--mouse-x) var(--mouse-y),
+      rgba(223, 218, 218, 0.3),
+      transparent 40%
+    );
+    z-index: 3;
+  }
+  &__border {
+    background: radial-gradient(
+      900px circle at var(--mouse-x) var(--mouse-y),
+      rgb(65, 182, 218),
+      transparent 40%
+    );
+    z-index: 1;
+  }
+  &::before,
+  &__border {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    transition: opacity 500ms;
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+  }
+  &__content {
+    background-color: rgb(23, 23, 23, 0.6);
+    border-radius: inherit;
+    margin: 1px;
+    position: relative;
+    padding: 30px;
+    z-index: 2;
+  }
+}

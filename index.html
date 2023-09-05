@@ -42,8 +42,8 @@
         </div>
       </div>
     </header>
-    <main id="scroll-container">
-      <section class="about-me" data-scroll-section>
+    <main>
+      <section class="about-me">
         <div class="about-me__container">
           <h2 data-i18n="hello" class="about-me__text"></h2>
           <h1 class="about-me__name">Antonio Souza</h1>
@@ -154,84 +154,122 @@
           </div>
           <div class="separator"></div>
         </div>
-        <div class="stack-list" id="stack">
+        <div class="stack-list" id="stack" data-anime="scroll">
           <div class="stack-icons">
             <div class="stack-icons__header">
               <h2>My Tech Stack</h2>
             </div>
-            <div class="separator"></div>
-            <div class="stack-icons__items">
-              <div class="stack-icons__item">
-                <i class="devicon-javascript-plain icon colored"></i>
-                <span class="icon-label"> Javascript </span>
-              </div>
-              <div class="stack-icons__item">
-                <i class="devicon-typescript-plain icon colored"></i>
-                <span class="icon-label"> Typescript </span>
-              </div>
-              <div class="stack-icons__item">
-                <i class="devicon-python-plain icon colored"></i>
-                <span class="icon-label"> Python </span>
-              </div>
-              <div class="stack-icons__item">
-                <i class="devicon-vuejs-plain icon colored"></i>
-                <span class="icon-label"> Vue.js </span>
-              </div>
-              <div class="stack-icons__item">
-                <i class="devicon-react-original icon colored"></i>
-                <span class="icon-label"> React.js </span>
-              </div>
-              <div class="stack-icons__item">
-                <i class="devicon-angularjs-plain colored icon"></i>
-                <span class="icon-label"> Angular </span>
-              </div>
-              <div class="stack-icons__item">
-                <i class="devicon-java-plain icon colored"></i>
-                <span class="icon-label"> Java </span>
-              </div>
-              <div class="stack-icons__item">
-                <i class="devicon-go-original-wordmark icon colored"></i>
-                <span class="icon-label"> Go </span>
-              </div>
-              <div class="stack-icons__item">
-                <i class="devicon-amazonwebservices-original icon colored"></i>
-                <span class="icon-label"> AWS </span>
-              </div>
-              <div class="stack-icons__item">
-                <i class="devicon-mongodb-plain icon colored"></i>
-                <span class="icon-label"> MongoDB </span>
-              </div>
-              <div class="stack-icons__item">
-                <i class="devicon-postgresql-plain icon colored"></i>
-                <span class="icon-label"> PostgreSQL </span>
-              </div>
-              <div class="stack-icons__item">
-                <i class="devicon-mysql-plain icon colored"></i>
-                <span class="icon-label"> mysql </span>
-              </div>
-              <div class="stack-icons__item">
-                <i class="devicon-nextjs-original icon"></i>
-                <span class="icon-label"> Next.js </span>
-              </div>
-              <div class="stack-icons__item">
-                <i class="devicon-nuxtjs-plain icon colored"></i>
-                <span class="icon-label"> Nuxt.js </span>
-              </div>
-              <div class="stack-icons__item">
-                <i class="devicon-kubernetes-plain icon colored"></i>
-                <span class="icon-label"> kubernetes </span>
-              </div>
-              <div class="stack-icons__item">
-                <i class="devicon-sass-original icon colored"></i>
-                <span class="icon-label"> Sass </span>
-              </div>
-              <div class="stack-icons__item">
-                <i class="devicon-docker-plain icon colored"></i>
-                <span class="icon-label"> Docker </span>
-              </div>
-              <div class="stack-icons__item">
-                <i class="devicon-meteor-plain icon colored"></i>
-                <span class="icon-label"> Meteor.js </span>
+            <!-- <div class="separator"></div> -->
+            <div class="card" data-tilt>
+              <div class="card__border"></div>
+              <div class="card__content">
+                <div class="stack-icons__items">
+                  <div class="stack-icons__item">
+                    <i class="devicon-javascript-plain icon colored"></i>
+                    <span class="icon-label"> Javascript </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <i class="devicon-typescript-plain icon colored"></i>
+                    <span class="icon-label"> Typescript </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                      class="icon"
+                    />
+
+                    <span class="icon-label"> Python </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                      class="icon"
+                    />
+
+                    <span class="icon-label"> Vue.js </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <i class="devicon-react-original icon colored"></i>
+                    <span class="icon-label"> React.js </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+                      class="icon"
+                    />
+
+                    <span class="icon-label"> Angular </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                      class="icon"
+                    />
+
+                    <span class="icon-label"> Java </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <i class="devicon-go-original-wordmark icon colored"></i>
+                    <span class="icon-label"> Go </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <i
+                      class="devicon-amazonwebservices-original icon colored"
+                    ></i>
+                    <span class="icon-label"> AWS </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                      class="icon"
+                    />
+
+                    <span class="icon-label"> MongoDB </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                      class="icon"
+                    />
+
+                    <span class="icon-label"> PostgreSQL </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <i class="devicon-mysql-plain icon colored"></i>
+                    <span class="icon-label"> mysql </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <i class="devicon-nextjs-original icon"></i>
+                    <span class="icon-label"> Next.js </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg"
+                      class="icon"
+                    />
+
+                    <span class="icon-label"> Nuxt.js </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <i class="devicon-kubernetes-plain icon colored"></i>
+                    <span class="icon-label"> kubernetes </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <i class="devicon-sass-original icon colored"></i>
+                    <span class="icon-label"> Sass </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                      class="icon"
+                    />
+                    <span class="icon-label"> Docker </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <i class="devicon-meteor-plain icon colored"></i>
+                    <span class="icon-label"> Meteor.js </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -252,8 +290,8 @@
           </div>
         </div>
       </section>
-      <section class="resume" data-scroll-section>
-        <aside class="card sidebar">
+      <section class="resume" data-anime="scroll">
+        <aside class="card sidebar" data-tilt>
           <div class="card__border"></div>
           <div class="card__content">
             <div class="sidebar__header">
@@ -319,7 +357,8 @@
             </div>
           </div>
         </aside>
-        <div class="card main-content">
+
+        <div class="card main-content" data-tilt data-tilt-perspective="10000">
           <div class="card__border"></div>
           <div class="card__content">
             <article class="main-content__resume" data-page="resume">
