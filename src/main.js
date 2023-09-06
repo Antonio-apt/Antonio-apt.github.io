@@ -1,125 +1,76 @@
 import "./styles/main.scss";
-import LocomotiveScroll from "locomotive-scroll";
 import initTranslations from "./scripts/i18n";
 import init from "./scripts/star";
 import addGlow from "./scripts/glow";
+import AnimateScroll from "./scripts/animate-scroll";
+import MouseHoverTilt from "./scripts/tilt";
 
 const { BASE_URL } = import.meta.env;
 
-addGlow(".header__actions", "lang-button");
-addGlow(".resume", "card");
+const animateScroll = new AnimateScroll("[data-anime='scroll']");
+animateScroll.init();
+
+addGlow(".header__translate-section", "lang-button");
+addGlow("main", "card");
+
 
 (() => {
-  const container = document.querySelector(".about-me__container");
-  const inner = document.querySelector(".about-me__name");
-  const mouse = {
-    _x: 0,
-    _y: 0,
-    x: 0,
-    y: 0,
-    updatePosition(event) {
-      const { clientX, clientY } = event;
-      this.x = clientX - this._x;
-      this.y = (clientY - this._y) * -1;
-    },
-    setOrigin(e) {
-      this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
-      this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
-    },
-    show() {
-      return `(${this.x}, ${this.y})`;
-    },
+  var doc = document.documentElement;
+  var w = window;
+
+  var prevScroll = w.scrollY || doc.scrollTop;
+  var curScroll;
+  var direction = 0;
+  var prevDirection = 0;
+
+  var header = document.querySelector(".header__actions");
+
+  var checkScroll = function () {
+    curScroll = w.scrollY || doc.scrollTop;
+    if (curScroll > prevScroll) {
+      direction = 2;
+    } else if (curScroll < prevScroll) {
+      direction = 1;
+    }
+
+    if (direction !== prevDirection) {
+      toggleHeader(direction, curScroll);
+    }
+
+    prevScroll = curScroll;
   };
 
-  mouse.setOrigin(container);
-
-  let counter = 0;
-  const updateRate = 10;
-  const isTimeToUpdate = () => counter++ % updateRate === 0;
-
-  const onMouseEnterHandler = (event) => update(event);
-
-  const onMouseLeaveHandler = () => {
-    inner.style = "";
-  };
-
-  const onMouseMoveHandler = (event) => {
-    if (isTimeToUpdate()) {
-      update(event);
+  var toggleHeader = function (direction, curScroll) {
+    if (direction === 2 && curScroll > 52) {
+      header.classList.add("hide");
+      prevDirection = direction;
+    } else if (direction === 1) {
+      header.classList.remove("hide");
+      prevDirection = direction;
     }
   };
 
-  const update = (event) => {
-    mouse.updatePosition(event);
-    const { offsetWidth, offsetHeight } = inner;
-    const x = (mouse.y / offsetHeight / 2).toFixed(2);
-    const y = (mouse.x / offsetWidth / 2).toFixed(2);
-    updateTransformStyle(`rotateX(${x}deg) rotateY(${y}deg)`);
-  };
-
-  const updateTransformStyle = (style) => {
-    inner.style.transform = style;
-    inner.style.webkitTransform = style;
-    inner.style.mozTransform = style;
-    inner.style.msTransform = style;
-    inner.style.oTransform = style;
-  };
-
-  container.addEventListener("mouseenter", onMouseEnterHandler);
-  container.addEventListener("mouseleave", onMouseLeaveHandler);
-  container.addEventListener("mousemove", onMouseMoveHandler);
+  window.addEventListener("scroll", checkScroll);
 })();
 
-const sidebar = document.querySelector(".sidebar");
+const zoom = document.querySelector(".carrousels");
+const zoomText = document.querySelectorAll(".carrousel");
+const minZoom = 1;
+const maxZoom = 1.5;
 
-const scrollOptions = {
-  el: document.querySelector("[data-scroll-container]"),
-  smooth: true,
-  mobile: {
-    smooth: true,
-  },
-  tablet: {
-    smooth: true,
-    breakpoint: 0,
-  },
-};
-
-let scroll;
-
-const initializeScroll = () => {
-  scroll = new LocomotiveScroll(scrollOptions);
-};
-
-const destroyScroll = () => {
-  if (scroll) {
-    scroll.destroy();
-    scroll = null;
+addEventListener("scroll", (e) => {
+  const vh = window.innerHeight / 100;
+  const scrollTop = document.documentElement.scrollTop;
+  const start = 100 * vh;
+  const stop = 200 * vh;
+  if (scrollTop > start && scrollTop < stop) {
+    const scale = Math.max(maxZoom - (scrollTop - start) / 500, minZoom);
+    zoom.style.transform = `scale(1, ${scale})`;
+    zoomText.forEach((text) => {
+      text.style.transform = `scale(${scale}, 1)`;
+    });
   }
-};
-
-window.addEventListener("load", () => {
-  initializeScroll()
 });
-
-
-const setDataScroll = () => {
-  if (window.innerWidth < 1000) {
-    sidebar.removeAttribute("data-scroll");
-    sidebar.removeAttribute("data-scroll-sticky");
-    sidebar.removeAttribute("data-scroll-target");
-    sidebar.removeAttribute("data-scroll-offset");
-    sidebar.removeAttribute("style");
-    destroyScroll();
-    return;
-  }
-  sidebar.setAttribute("data-scroll", "");
-  sidebar.setAttribute("data-scroll-sticky", "");
-  sidebar.setAttribute("data-scroll-target", ".resume");
-  sidebar.setAttribute("data-scroll-offset", "-20, 48");
-};
-
-setDataScroll();
-window.addEventListener("resize", setDataScroll);
 
 initTranslations();
 init();

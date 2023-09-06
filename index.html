@@ -8,34 +8,42 @@
       href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
     <title>Antonio Souza</title>
   </head>
 
   <body>
     <header class="header">
-      <h3 data-i18n="construction" class="header__title">in construction 🚧</h3>
       <div class="header__actions">
-        <button class="lang-button" data-locale="pt">
-          <div class="lang-button__border"></div>
-          <div class="lang-button__text">
-            <span> Português </span>
-          </div>
-        </button>
-        <button class="lang-button" data-locale="en">
-          <div class="lang-button__border"></div>
-          <div class="lang-button__text">
-            <span> English </span>
-          </div>
-        </button>
+        <h3 data-i18n="construction" class="header__title">
+          in construction 🚧
+        </h3>
+        <nav class="header__page-links">
+          <a href="#about-me">About-me</a>
+          <a href="#stack">Stack</a>
+          <a href="#resume">Resume</a>
+        </nav>
+        <div class="header__translate-section">
+          <button class="lang-button" data-locale="pt">
+            <div class="lang-button__border"></div>
+            <div class="lang-button__text">
+              <span> Português </span>
+            </div>
+          </button>
+          <button class="lang-button" data-locale="en">
+            <div class="lang-button__border"></div>
+            <div class="lang-button__text">
+              <span> English </span>
+            </div>
+          </button>
+        </div>
       </div>
     </header>
-    <main
-      data-scroll-container
-      data-scroll
-      data-scroll-sticky
-      id="scroll-container"
-    >
-      <section class="about-me" data-scroll-section>
+    <main>
+      <section class="about-me">
         <div class="about-me__container">
           <h2 data-i18n="hello" class="about-me__text"></h2>
           <h1 class="about-me__name">Antonio Souza</h1>
@@ -67,15 +75,225 @@
           </h2>
         </div>
       </section>
+      <section class="stack">
+        <div class="carrousels">
+          <div class="separator"></div>
+          <div class="carrousel">
+            <p class="carrousel__stack">
+              <span>Javascript - </span>
+              <span>AWS - </span>
+              <span>Python - </span>
+              <span>kubernetes - </span>
+              <span>Go - </span>
+              <span>Docker - </span>
+              <span>Node - </span>
+              <span>Typescript - </span>
+            </p>
+            <p class="carrousel__stack">
+              <span>Javascript - </span>
+              <span>AWS - </span>
+              <span>Python - </span>
+              <span>kubernetes - </span>
+              <span>Go - </span>
+              <span>Docker - </span>
+              <span>Node - </span>
+              <span>Typescript - </span>
+            </p>
+          </div>
+          <div class="separator"></div>
+          <div class="carrousel reverse">
+            <p class="carrousel__stack">
+              <span>Typescript - </span>
+              <span>Python - </span>
+              <span>Docker - </span>
+              <span>Go - </span>
+              <span>Node - </span>
+              <span>kubernetes - </span>
+              <span>Javascript - </span>
+              <span>AWS - </span>
+              <span>Java - </span>
+            </p>
+            <p class="carrousel__stack">
+              <span>Typescript - </span>
+              <span>Python - </span>
+              <span>Docker - </span>
+              <span>Go - </span>
+              <span>Node - </span>
+              <span>kubernetes - </span>
+              <span>Javascript - </span>
+              <span>AWS - </span>
+              <span>Java - </span>
+            </p>
+          </div>
+          <div class="separator"></div>
+          <div class="carrousel">
+            <p class="carrousel__stack">
+              <span>AWS - </span>
+              <span>Javascript - </span>
+              <span>Typescript - </span>
+              <span>Python - </span>
+              <span>Docker - </span>
+              <span>Go - </span>
+              <span>kubernetes - </span>
+              <span>Node - </span>
+              <span>AWS - </span>
+              <span>Meteor.js - </span>
+            </p>
+            <p class="carrousel__stack">
+              <span>AWS - </span>
+              <span>Javascript - </span>
+              <span>Typescript - </span>
+              <span>Python - </span>
+              <span>Docker - </span>
+              <span>Go - </span>
+              <span>kubernetes - </span>
+              <span>Node - </span>
+              <span>AWS - </span>
+              <span>Meteor.js - </span>
+            </p>
+          </div>
+          <div class="separator"></div>
+        </div>
+        <div class="stack-list" id="stack" data-anime="scroll">
+          <div class="stack-icons">
+            <div class="stack-icons__header">
+              <h2>My Tech Stack</h2>
+            </div>
+            <div class="card" data-tilt>
+              <div class="card__border"></div>
+              <div class="card__content">
+                <div class="stack-icons__items">
+                  <div class="stack-icons__item">
+                    <i class="devicon-javascript-plain icon colored"></i>
+                    <span class="icon-label"> Javascript </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <i class="devicon-typescript-plain icon colored"></i>
+                    <span class="icon-label"> Typescript </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                      class="icon"
+                    />
 
-      <section class="resume" data-scroll-section>
-        <aside
-          class="card sidebar"
-          data-scroll
-          data-scroll-sticky
-          data-scroll-target=".resume"
-          data-scroll-offset="-20"
-        >
+                    <span class="icon-label"> Python </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                      class="icon"
+                    />
+
+                    <span class="icon-label"> Vue.js </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <i class="devicon-react-original icon colored"></i>
+                    <span class="icon-label"> React.js </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+                      class="icon"
+                    />
+
+                    <span class="icon-label"> Angular </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                      class="icon"
+                    />
+
+                    <span class="icon-label"> Java </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <i class="devicon-go-original-wordmark icon colored"></i>
+                    <span class="icon-label"> Go </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <i
+                      class="devicon-amazonwebservices-original icon colored"
+                    ></i>
+                    <span class="icon-label"> AWS </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                      class="icon"
+                    />
+
+                    <span class="icon-label"> MongoDB </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                      class="icon"
+                    />
+
+                    <span class="icon-label"> PostgreSQL </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <i class="devicon-mysql-plain icon colored"></i>
+                    <span class="icon-label"> mysql </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <i class="devicon-nextjs-original icon"></i>
+                    <span class="icon-label"> Next.js </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg"
+                      class="icon"
+                    />
+
+                    <span class="icon-label"> Nuxt.js </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <i class="devicon-kubernetes-plain icon colored"></i>
+                    <span class="icon-label"> kubernetes </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <i class="devicon-sass-original icon colored"></i>
+                    <span class="icon-label"> Sass </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                      class="icon"
+                    />
+                    <span class="icon-label"> Docker </span>
+                  </div>
+                  <div class="stack-icons__item">
+                    <i class="devicon-meteor-plain icon colored"></i>
+                    <span class="icon-label"> Meteor.js </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stack-description" data-tilt>
+            <h2 class="stack-description__title">Programming experience</h2>
+            <p class="stack-description__main-text">
+              Hello, I'm Antonio Souza, a Web Developer at Compass Uol with 4
+              years of experience in the technology market. Currently, I'm in my
+              final year of graduation in Information Systems at the University
+              of São Paulo. My passion for web development led me to specialize
+              in front-end technologies like Vue and React. I'm a curious and
+              enthusiastic learner who constantly seeks to expand my knowledge.
+              In addition to Vue and React, I have experience working with AEM,
+              Node.js, Java, AWS, Meteor.js, Angular, and other tools. My
+              current focus is on studying Cloud Computing and data analysis to
+              enhance my skillset. During my career, I've worked on challenging
+              projects that have honed my problem-solving and teamwork skills.
+              I'm a committed and organized professional who strives to keep
+              learning and growing.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="resume" data-anime="scroll">
+        <aside class="card sidebar" data-tilt>
           <div class="card__border"></div>
           <div class="card__content">
             <div class="sidebar__header">
@@ -141,7 +359,8 @@
             </div>
           </div>
         </aside>
-        <div class="card main-content">
+
+        <div class="card main-content" data-tilt data-tilt-perspective="10000">
           <div class="card__border"></div>
           <div class="card__content">
             <article class="main-content__resume" data-page="resume">
@@ -347,78 +566,11 @@
           </div>
         </div>
       </section>
-      <section class="knowledge" data-scroll-section>
-        <div class="knowledge__container" id="scroll-direction">
-          <div class="knowledge__direction-block_wrapper">
-            <div class="knowledge__direction-block" id="direction">
-              <div class="knowledge__direction-block_item -one">
-                <span
-                  class="knowledge__direction-block_item_inner"
-                  data-scroll
-                  data-scroll-direction="horizontal"
-                  data-scroll-speed="6"
-                  data-scroll-target="#direction"
-                >
-                  Javascript - AWS - Vue.js - CSS
-                </span>
-              </div>
-              <div class="knowledge__direction-block_item -two">
-                <span
-                  class="knowledge__direction-block_item_inner"
-                  data-scroll
-                  data-scroll-direction="horizontal"
-                  data-scroll-speed="-8"
-                  data-scroll-target="#direction"
-                  data-scroll-delay="0.08"
-                >
-                  Python - Typescript
-                </span>
-              </div>
-              <div class="knowledge__direction-block_item -three">
-                <span
-                  class="knowledge__direction-block_item_inner"
-                  data-scroll
-                  data-scroll-direction="horizontal"
-                  data-scroll-speed="9"
-                  data-scroll-target="#direction"
-                  data-scroll-delay="0.05"
-                >
-                  React.js - Node.js - SQL
-                </span>
-              </div>
-              <div class="knowledge__direction-block_item -four">
-                <span
-                  class="knowledge__direction-block_item_inner"
-                  data-scroll
-                  data-scroll-direction="horizontal"
-                  data-scroll-speed="15"
-                  data-scroll-target="#direction"
-                >
-                  AEM - Metoer - Nuxt
-                </span>
-              </div>
-              <div class="knowledge__direction-block_item -five">
-                <span
-                  class="knowledge__direction-block_item_inner"
-                  data-scroll
-                  data-scroll-direction="horizontal"
-                  data-scroll-speed="-20"
-                  data-scroll-target="#direction"
-                  data-scroll-delay="0.05"
-                >
-                  AWS - Vue.js
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="footer" data-scroll-section>
-        <div class="footer-bar"></div>
-      </section>
-      <!-- <section id="footer" data-scroll-section>
-    </section> -->
+      <section class="stack"></section>
     </main>
+    <section id="footer">
+      <div class="footer-bar"></div>
+    </section>
     <script type="module" src="./src/main.js"></script>
     <script
       type="module"
