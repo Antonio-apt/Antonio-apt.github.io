@@ -67,25 +67,21 @@
   }
   .stack-list {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     max-width: 85dvw;
-    height: 100vh;
     padding: 1rem;
     margin-top: 20dvh;
     margin-inline: auto;
     .stack-icons {
       $self: &;
       position: relative;
-      backdrop-filter: blur(4px);
-      transform-style: preserve-3d;
-      transform: perspective(1000px);
       &__header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         color: white;
         font-weight: normal;
-        padding: 1rem 5rem;
+        padding: 1rem 0 3rem 0;
         text-transform: uppercase;
         font-size: 2em;
         transform: translateZ(20px)
@@ -122,30 +118,22 @@
           }
         }
       }
-      &::after {
-        content: "";
-        position: absolute;
-        top: 8px;
-        left: 8px;
-        right: -8px;
-        bottom: -8px;
-        z-index: -1;
-      }
     }
     .stack-description {
+      position: sticky;
+      align-self: start;
+      top: 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       text-align: justify;
       white-space: wrap;
-      padding: 4rem;
-      margin: 2rem;
-      max-height: 50dvh;
+      padding: 4rem 2rem 5rem 2rem;
       color: black;
       background-color: #ffc512;
-      will-change: transform;
-      transition: 0.5s ease transform;
+      box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+      border-radius: 7px;
       &__title {
         align-self:  end;
       }

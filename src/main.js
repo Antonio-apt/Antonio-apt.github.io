@@ -9,8 +9,6 @@ const { BASE_URL } = import.meta.env;
 
 const animateScroll = new AnimateScroll("[data-anime='scroll']");
 animateScroll.init();
-// const mouseHoverAnimation = new MouseHoverAnimation("[data-anime='perspective']", "[data-anime='inner']");
-// mouseHoverAnimation.init();
 
 addGlow(".header__translate-section", "lang-button");
 addGlow("main", "card");
