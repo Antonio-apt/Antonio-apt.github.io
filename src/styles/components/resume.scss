@@ -41,6 +41,9 @@
       gap: 1.5rem;
       display: flex;
       flex-direction: column;
+      .grow {
+        flex-grow: 2;
+      }
     }
   }
 }
