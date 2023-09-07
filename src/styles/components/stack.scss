@@ -31,6 +31,7 @@
     will-change: transform;
     font-size: 5em;
     transform: scale(1, 1.5);
+    margin-bottom: 35dvh;
     .carrousel {
       overflow: hidden;
       white-space: nowrap;
@@ -84,7 +85,22 @@
         padding: 1rem 0 3rem 0;
         text-transform: uppercase;
         font-size: 2em;
-        transform: translateZ(20px)
+        transform: translateZ(20px);
+        .stack-icons__title {
+          font-weight: normal;
+          font-size: 2em;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 25%;
+            left: -31%;
+            width: 120%;
+            height: 1px;
+            background: #ffc512;
+            border-radius: 3px;
+          }
+        }
+        
       }
       .separator {
         background: white;
@@ -128,7 +144,6 @@
       justify-content: center;
       flex-direction: column;
       text-align: justify;
-      // white-space: wrap;
       word-wrap: normal;
       resize: none;
       box-sizing: border-box;

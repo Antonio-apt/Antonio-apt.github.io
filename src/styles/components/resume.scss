@@ -1,11 +1,53 @@
 .resume {
-  position: relative;
+  $self: &;
   height: fit-content;
   margin-inline: auto;
   align-items: stretch;
-  gap: 1.5rem;
-  margin: 15px 12px;
-
+  margin-top: 15dvh;
+  &__header {
+    position: sticky;
+    margin-bottom: 10dvh;
+    #{ $self }__title {
+      font-size: 5em;
+      font-weight: normal;
+      text-transform: uppercase;
+      padding-left: 5rem;
+      &::after,
+      &::before {
+        position: absolute;
+        top: 0;
+        width: 15%;
+        height: 100%;
+        content: "";
+      }
+      // &::before {
+      //   left: 0;
+      //   background: linear-gradient(to left, rgba(255, 255, 255, 0), black);
+      // }
+      // &::after {
+      //   right: 0;
+      //   background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
+      // }
+    }
+    .separator {
+      position: relative;
+      height: 1px;
+      border-radius: 2px;
+      margin: 30px 0;
+      width: 100%;
+      background: #ffc512;
+      will-change: transform;
+      z-index: 1;
+    }
+    // &:hover {
+    //   transition: ease 1s;
+    //   background-color: #fccc3b;
+    // }
+  }
+  &__main-container {
+    position: relative;
+    gap: 1.5rem;
+  }
   .main-content {
     &__title {
       padding-bottom: 0.75rem;
@@ -206,9 +248,10 @@
             &__image {
               width: inherit;
               height: inherit;
+              filter: grayscale(90%);
             }
           }
-          &__title{
+          &__title {
             .company-name {
               color: #fccc3b;
               text-decoration: none;
@@ -246,18 +289,19 @@
   }
 }
 
-
 @media (min-width: $from-medium) {
   .resume {
-    max-width: 85vw;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    margin-inline: auto;
-    .sidebar {
-      min-width: 340px;
-      margin-bottom: 0;
-      max-height: max-content;
+    &__main-container {
+      display: flex;
+      max-width: 85vw;
+      justify-content: center;
+      align-items: stretch;
+      margin-inline: auto;
+      .sidebar {
+        min-width: 340px;
+        margin-bottom: 0;
+        max-height: max-content;
+      }
     }
   }
 }
