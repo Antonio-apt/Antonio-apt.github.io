@@ -145,13 +145,12 @@
       flex-direction: column;
       text-align: justify;
       word-wrap: normal;
-      resize: none;
-      box-sizing: border-box;
       padding: 4rem 2rem 5rem 2rem;
       color: black;
       background-color: #ffc512;
       box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
       border-radius: 7px;
+      margin-left: -1rem;
       &__title {
         align-self:  end;
       }
