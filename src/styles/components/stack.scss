@@ -16,7 +16,6 @@
 }
 .stack {
   overflow: hidden;
-  white-space: nowrap;
   .separator {
     height: 1px;
     border-radius: 2px;
@@ -26,6 +25,7 @@
     will-change: transform;
   }
   .carrousels {
+    white-space: nowrap;
     position: sticky;
     top: 20dvh;
     will-change: transform;
@@ -128,7 +128,10 @@
       justify-content: center;
       flex-direction: column;
       text-align: justify;
-      white-space: wrap;
+      // white-space: wrap;
+      word-wrap: normal;
+      resize: none;
+      box-sizing: border-box;
       padding: 4rem 2rem 5rem 2rem;
       color: black;
       background-color: #ffc512;
@@ -139,6 +142,8 @@
       }
       &__main-text {
         padding-top: 3rem;
+        display:inline-block
+
       }
     }
   }
