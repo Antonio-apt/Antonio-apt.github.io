@@ -1,24 +1,48 @@
 .resume {
-  position: relative;
+  $self: &;
   height: fit-content;
   margin-inline: auto;
   align-items: stretch;
-  gap: 1.5rem;
-  margin: 15px 12px;
-
-  .main-content {
-    &__title {
-      padding-bottom: 0.75rem;
-      position: relative;
-      &::after {
-        content: "";
+  margin-top: 15dvh;
+  &__header {
+    position: sticky;
+    margin-bottom: 10dvh;
+    #{ $self }__title {
+      font-size: 5em;
+      font-weight: normal;
+      text-transform: uppercase;
+      padding-left: 5rem;
+      &::after,
+      &::before {
         position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 40%;
-        height: 10px;
-        background: linear-gradient(to right, #ffc512, #e6c666, #308bd3);
-        border-radius: 3px;
+        top: 0;
+        width: 15%;
+        height: 100%;
+        content: "";
+      }
+    }
+    .separator {
+      position: relative;
+      height: 1px;
+      border-radius: 2px;
+      margin: 30px 0;
+      width: 100%;
+      background: #ffc512;
+      will-change: transform;
+      z-index: 1;
+    }
+  }
+  &__main-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1.5rem;
+    #{ $self }__row {
+      gap: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      .grow {
+        flex-grow: 2;
       }
     }
   }
@@ -206,9 +230,10 @@
             &__image {
               width: inherit;
               height: inherit;
+              filter: grayscale(90%);
             }
           }
-          &__title{
+          &__title {
             .company-name {
               color: #fccc3b;
               text-decoration: none;
@@ -246,18 +271,25 @@
   }
 }
 
-
 @media (min-width: $from-medium) {
   .resume {
-    max-width: 85vw;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    margin-inline: auto;
-    .sidebar {
-      min-width: 340px;
-      margin-bottom: 0;
-      max-height: max-content;
+    $self: &;
+    &__main-container {
+      display: flex;
+      max-width: 85vw;
+      justify-content: center;
+      align-items: stretch;
+      margin-inline: auto;
+      .sidebar {
+        min-width: 340px;
+        margin-bottom: 0;
+        max-height: max-content;
+      }
+      #{ $self }__row {
+        gap: 1.5rem;
+        display: flex;
+        flex-direction: row;
+      }
     }
   }
 }

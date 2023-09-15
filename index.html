@@ -22,9 +22,9 @@
           in construction 🚧
         </h3>
         <nav class="header__page-links">
-          <a href="#about-me">About-me</a>
           <a href="#stack">Stack</a>
           <a href="#resume">Resume</a>
+          <a href="#resume">Articles</a>
         </nav>
         <div class="header__translate-section">
           <button class="lang-button" data-locale="pt">
@@ -157,9 +157,9 @@
         <div class="stack-list" id="stack" data-anime="scroll">
           <div class="stack-icons">
             <div class="stack-icons__header">
-              <h2>My Tech Stack</h2>
+              <h2 class="stack-icons__title">My Tech Stack</h2>
             </div>
-            <div class="card" data-tilt>
+            <div class="card" data-tilt data-tilt-reset="false">
               <div class="card__border"></div>
               <div class="card__content">
                 <div class="stack-icons__items">
@@ -272,9 +272,9 @@
               </div>
             </div>
           </div>
-          <div class="stack-description" data-tilt>
+          <div class="stack-description" data-tilt data-tilt-reset="false">
             <h2 class="stack-description__title">Programming experience</h2>
-            <div class="stack-description__main-text" >
+            <div class="stack-description__main-text">
               Hello, I'm Antonio Souza, a Web Developer at Compass Uol with 4
               years of experience in the technology market. Currently, I'm in my
               final year of graduation in Information Systems at the University
@@ -292,277 +292,319 @@
           </div>
         </div>
       </section>
-      <section class="resume" data-anime="scroll">
-        <aside class="card sidebar" data-tilt>
-          <div class="card__border"></div>
-          <div class="card__content">
-            <div class="sidebar__header">
-              <h1 class="sidebar__name" title="Antonio Souza">Antonio Souza</h1>
+      <section class="resume" data-anime="scroll" id="resume">
+        <div class="resume__header">
+          <div class="separator"></div>
+          <h2 data-i18n="resume" class="resume__title"></h2>
+          <div class="separator"></div>
+        </div>
+        <div class="resume__main-container">
+          <div class="resume__row">
+            <aside class="card sidebar" data-tilt>
+              <div class="card__border"></div>
+              <div class="card__content">
+                <div class="sidebar__header">
+                  <h1 class="sidebar__name" title="Antonio Souza">
+                    Antonio Souza
+                  </h1>
 
-              <p class="sidebar__title">Fullstack developer</p>
-            </div>
-            <div class="sidebar__body">
-              <div class="separator"></div>
+                  <p class="sidebar__title">Fullstack developer</p>
+                </div>
+                <div class="sidebar__body">
+                  <div class="separator"></div>
 
-              <ul class="sidebar__contacts-list">
-                <li class="sidebar__contact-item">
-                  <div class="sidebar__icon-box">
-                    <ion-icon name="mail-outline"></ion-icon>
+                  <ul class="sidebar__contacts-list">
+                    <li class="sidebar__contact-item">
+                      <div class="sidebar__icon-box">
+                        <ion-icon name="mail-outline"></ion-icon>
+                      </div>
+
+                      <div class="sidebar__contact-info">
+                        <p class="sidebar__contact-title">Email</p>
+
+                        <a
+                          href="mailto:antonios16020@gmail.com"
+                          class="sidebar__contact-link"
+                          >antonios16020@gmail.com</a
+                        >
+                      </div>
+                    </li>
+                    <li class="sidebar__contact-item">
+                      <div class="sidebar__icon-box">
+                        <ion-icon name="location-outline"></ion-icon>
+                      </div>
+
+                      <div class="sidebar__contact-info">
+                        <p
+                          data-i18n="location"
+                          class="sidebar__contact-title"
+                        ></p>
+
+                        <address>São Paulo, BR</address>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="separator"></div>
+
+                  <ul class="sidebar__social-list">
+                    <li class="sidebar__social-item">
+                      <a
+                        href="https://www.linkedin.com/in/antoniogsouza/"
+                        target="_blank"
+                        class="sidebar__social-link"
+                      >
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                      </a>
+                    </li>
+
+                    <li class="sidebar__social-item">
+                      <a
+                        href="https://github.com/Antonio-apt"
+                        target="_blank"
+                        class="sidebar__social-link"
+                      >
+                        <ion-icon name="logo-github"></ion-icon>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </aside>
+            <div
+              class="card main-content"
+              data-tilt
+              data-tilt-perspective="5000"
+            >
+              <div class="card__border"></div>
+              <div class="card__content">
+                <article class="main-content__resume">
+                  <div class="timeline">
+                    <div class="title-wrapper">
+                      <div class="icon-box">
+                        <ion-icon name="code-slash-outline"></ion-icon>
+                      </div>
+                      <h3 data-i18n="experience" class="h3 timeline__title">
+                        Experience
+                      </h3>
+                    </div>
+                    <ol class="timeline-list">
+                      <li class="timeline-item">
+                        <h4 class="h4 timeline-item__title">
+                          Web Developer |
+                          <a
+                            class="company-name"
+                            href="https://compass.uol/en/home/"
+                            target="_blank"
+                            >Compass.uol</a
+                          >
+                        </h4>
+                        <span data-i18n="compass-date"></span>
+                        <p data-i18n="compass" class="timeline-item__text"></p>
+                      </li>
+                      <li class="timeline-item">
+                        <h4 class="h4 timeline-item__title">
+                          Full-Stack Developer |
+                          <a
+                            class="company-name"
+                            href="https://www.scipopulis.com/"
+                            target="_blank"
+                            >Scipopulis</a
+                          >
+                        </h4>
+                        <span data-i18n="scipopulis-date"></span>
+                        <p
+                          data-i18n="scipopulis"
+                          class="timeline-item__text"
+                        ></p>
+                      </li>
+                      <li class="timeline-item">
+                        <h4 class="h4 timeline-item__title">
+                          Front-End Developer |
+                          <a
+                            class="company-name"
+                            href="https://madeinweb.com.br/projetos/"
+                            target="_blank"
+                            >MadeinWeb</a
+                          >
+                        </h4>
+                        <span data-i18n="madeinweb-2-date"></span>
+                        <p
+                          data-i18n="madeinweb-2"
+                          class="timeline-item__text"
+                        ></p>
+                      </li>
+                      <li class="timeline-item">
+                        <h4 class="h4 timeline-item__title">
+                          Quality Assurance |
+                          <a
+                            class="company-name"
+                            href="https://madeinweb.com.br/projetos/"
+                            target="_blank"
+                            >MadeinWeb</a
+                          >
+                        </h4>
+                        <span data-i18n="madeinweb-1-date"></span>
+                        <p
+                          data-i18n="madeinweb-1"
+                          class="timeline-item__text"
+                        ></p>
+                      </li>
+                    </ol>
                   </div>
-
-                  <div class="sidebar__contact-info">
-                    <p class="sidebar__contact-title">Email</p>
-
-                    <a
-                      href="mailto:antonios16020@gmail.com"
-                      class="sidebar__contact-link"
-                      >antonios16020@gmail.com</a
-                    >
-                  </div>
-                </li>
-                <li class="sidebar__contact-item">
-                  <div class="sidebar__icon-box">
-                    <ion-icon name="location-outline"></ion-icon>
-                  </div>
-
-                  <div class="sidebar__contact-info">
-                    <p data-i18n="location" class="sidebar__contact-title"></p>
-
-                    <address>São Paulo, BR</address>
-                  </div>
-                </li>
-              </ul>
-
-              <div class="separator"></div>
-
-              <ul class="sidebar__social-list">
-                <li class="sidebar__social-item">
-                  <a
-                    href="https://www.linkedin.com/in/antoniogsouza/"
-                    target="_blank"
-                    class="sidebar__social-link"
-                  >
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                  </a>
-                </li>
-
-                <li class="sidebar__social-item">
-                  <a
-                    href="https://github.com/Antonio-apt"
-                    target="_blank"
-                    class="sidebar__social-link"
-                  >
-                    <ion-icon name="logo-github"></ion-icon>
-                  </a>
-                </li>
-              </ul>
+                </article>
+              </div>
             </div>
           </div>
-        </aside>
-
-        <div class="card main-content" data-tilt data-tilt-perspective="10000">
-          <div class="card__border"></div>
-          <div class="card__content">
-            <article class="main-content__resume" data-page="resume">
-              <header>
-                <h2 data-i18n="resume" class="h2 article-title"></h2>
-              </header>
-              <div class="timeline">
-                <div class="title-wrapper">
-                  <div class="icon-box">
-                    <ion-icon name="code-slash-outline"></ion-icon>
+          <div class="resume__row">
+            <div class="card grow" data-tilt>
+              <div class="card__border"></div>
+              <div class="card__content">
+                <article class="main-content__resume">
+                  <div class="timeline">
+                    <div class="title-wrapper">
+                      <div class="icon-box">
+                        <ion-icon name="ribbon-outline"></ion-icon>
+                      </div>
+                      <h3
+                        data-i18n="additional-education"
+                        class="h3 timeline__title"
+                      ></h3>
+                    </div>
+                    <ol class="timeline-list">
+                      <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">
+                          AWS Certified Developer – Associate
+                        </h4>
+                        <span>August 25, 2023 - August 25, 2026</span>
+                        <p class="timeline-item__text">
+                          <a
+                            class="badge"
+                            href="https://www.credly.com/badges/06e299c3-dd80-4e7b-80ae-afe9e5c97b2d/public_url"
+                            title="AWS Developer"
+                            target="_blank"
+                          >
+                            <img
+                              class="badge__image"
+                              src="https://images.credly.com/size/200x200/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png"
+                            />
+                          </a>
+                          <a
+                            class="badge"
+                            href="https://www.credly.com/badges/fea943a6-7c93-4d9a-8ad7-9b414f10d7f3/public_url"
+                            title="AWS Pratictioner"
+                            target="_blank"
+                          >
+                            <img
+                              class="badge__image"
+                              src="https://images.credly.com/size/200x200/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
+                            />
+                          </a>
+                        </p>
+                      </li>
+                      <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">AWS Courses</h4>
+                        <span>Courses and accreditations</span>
+                        <p class="timeline-item__text">
+                          <a
+                            class="badge"
+                            href="https://www.credly.com/badges/eeaff33c-0355-443f-811e-3bf9bb6c6460/public_url"
+                            title="AWS Educate Web Builder"
+                            target="_blank"
+                          >
+                            <img
+                              class="badge__image"
+                              src="https://images.credly.com/size/200x200/images/b7695469-4083-4e65-b11b-ffc90f4492dd/image.png"
+                            />
+                          </a>
+                          <a
+                            class="badge"
+                            href="https://www.credly.com/badges/dd2b95c6-ed89-4106-ab8d-822fa505ebf3/public_url"
+                            title="AWS Knowledge: Architecting"
+                            target="_blank"
+                          >
+                            <img
+                              class="badge__image"
+                              src="https://images.credly.com/size/200x200/images/519a6dba-f145-4c1a-85a2-1d173d6898d9/image.png"
+                            />
+                          </a>
+                          <a
+                            class="badge"
+                            href="https://www.credly.com/badges/9fdbdf7f-64e6-40fc-8d2f-a25ffe9d2ae6/public_url"
+                            title="AWS Partner: Accreditation (Technical)"
+                            target="_blank"
+                          >
+                            <img
+                              class="badge__image"
+                              src="https://images.credly.com/size/200x200/images/81f903ed-c3a1-4f4b-afcd-e03331a5b12c/image.png"
+                            />
+                          </a>
+                        </p>
+                      </li>
+                      <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">
+                          Applied Plotting, Charting & Data Representation in
+                          Python
+                        </h4>
+                        <span>August 13, 2020</span>
+                        <p class="timeline-item__text">
+                          University of Michigan - Coursera
+                        </p>
+                      </li>
+                      <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">
+                          Version Control with Git
+                        </h4>
+                        <span>July 20, 2020</span>
+                        <p class="timeline-item__text">Atlassian - Coursera</p>
+                      </li>
+                      <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">
+                          Introduction to Data Science in Python
+                        </h4>
+                        <span>July 16, 2020</span>
+                        <p class="timeline-item__text">
+                          University of Michigan - Coursera
+                        </p>
+                      </li>
+                    </ol>
                   </div>
-                  <h3 data-i18n="experience" class="h3 timeline__title">
-                    Experience
-                  </h3>
-                </div>
-                <ol class="timeline-list">
-                  <li class="timeline-item">
-                    <h4 class="h4 timeline-item__title">
-                      Web Developer |
-                      <a
-                        class="company-name"
-                        href="https://compass.uol/en/home/"
-                        target="_blank"
-                        >Compass.uol</a
-                      >
-                    </h4>
-                    <span data-i18n="compass-date"></span>
-                    <p data-i18n="compass" class="timeline-item__text"></p>
-                  </li>
-                  <li class="timeline-item">
-                    <h4 class="h4 timeline-item__title">
-                      Full-Stack Developer |
-                      <a
-                        class="company-name"
-                        href="https://www.scipopulis.com/"
-                        target="_blank"
-                        >Scipopulis</a
-                      >
-                    </h4>
-                    <span data-i18n="scipopulis-date"></span>
-                    <p data-i18n="scipopulis" class="timeline-item__text"></p>
-                  </li>
-                  <li class="timeline-item">
-                    <h4 class="h4 timeline-item__title">
-                      Front-End Developer |
-                      <a
-                        class="company-name"
-                        href="https://madeinweb.com.br/projetos/"
-                        target="_blank"
-                        >MadeinWeb</a
-                      >
-                    </h4>
-                    <span data-i18n="madeinweb-2-date"></span>
-                    <p data-i18n="madeinweb-2" class="timeline-item__text"></p>
-                  </li>
-                  <li class="timeline-item">
-                    <h4 class="h4 timeline-item__title">
-                      Quality Assurance |
-                      <a
-                        class="company-name"
-                        href="https://madeinweb.com.br/projetos/"
-                        target="_blank"
-                        >MadeinWeb</a
-                      >
-                    </h4>
-                    <span data-i18n="madeinweb-1-date"></span>
-                    <p data-i18n="madeinweb-1" class="timeline-item__text"></p>
-                  </li>
-                </ol>
+                </article>
               </div>
-              <div class="timeline">
-                <div class="title-wrapper">
-                  <div class="icon-box">
-                    <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <div class="card sidebar" data-tilt>
+              <div class="card__border"></div>
+              <div class="card__content">
+                <article class="main-content__resume">
+                  <div class="timeline">
+                    <div class="title-wrapper">
+                      <div class="icon-box">
+                        <ion-icon name="book-outline"></ion-icon>
+                      </div>
+                      <h3 data-i18n="education" class="h3 timeline__title">
+                        Education
+                      </h3>
+                    </div>
+                    <ol class="timeline-list">
+                      <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">
+                          Universidade de São Paulo
+                        </h4>
+                        <span>2020 — 2023</span>
+                        <p data-i18n="usp" class="timeline-item__text"></p>
+                      </li>
+                      <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">
+                          Etec Santa Isabel
+                        </h4>
+                        <span>2017 — 2019</span>
+                        <p data-i18n="etec" class="timeline-item__text"></p>
+                      </li>
+                    </ol>
                   </div>
-                  <h3 data-i18n="education" class="h3 timeline__title">
-                    Education
-                  </h3>
-                </div>
-                <ol class="timeline-list">
-                  <li class="timeline-item">
-                    <h4 class="h4 timeline-item-title">
-                      Universidade de São Paulo
-                    </h4>
-                    <span>2020 — 2023</span>
-                    <p data-i18n="usp" class="timeline-item__text"></p>
-                  </li>
-                  <li class="timeline-item">
-                    <h4 class="h4 timeline-item-title">Etec Santa Isabel</h4>
-                    <span>2017 — 2019</span>
-                    <p data-i18n="etec" class="timeline-item__text"></p>
-                  </li>
-                </ol>
+                </article>
               </div>
-              <div class="timeline">
-                <div class="title-wrapper">
-                  <div class="icon-box">
-                    <ion-icon name="ribbon-outline"></ion-icon>
-                  </div>
-                  <h3
-                    data-i18n="additional-education"
-                    class="h3 timeline__title"
-                  ></h3>
-                </div>
-                <ol class="timeline-list">
-                  <li class="timeline-item">
-                    <h4 class="h4 timeline-item-title">
-                      AWS Certified Developer – Associate
-                    </h4>
-                    <span>August 25, 2023 - August 25, 2026</span>
-                    <p class="timeline-item__text">
-                      <a
-                        class="badge"
-                        href="https://www.credly.com/badges/06e299c3-dd80-4e7b-80ae-afe9e5c97b2d/public_url"
-                        title="AWS Developer"
-                        target="_blank"
-                      >
-                        <img
-                          class="badge__image"
-                          src="https://images.credly.com/size/200x200/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png"
-                        />
-                      </a>
-                      <a
-                        class="badge"
-                        href="https://www.credly.com/badges/fea943a6-7c93-4d9a-8ad7-9b414f10d7f3/public_url"
-                        title="AWS Pratictioner"
-                        target="_blank"
-                      >
-                        <img
-                          class="badge__image"
-                          src="https://images.credly.com/size/200x200/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
-                        />
-                      </a>
-                    </p>
-                  </li>
-                  <li class="timeline-item">
-                    <h4 class="h4 timeline-item-title">AWS Courses</h4>
-                    <span>Courses and accreditations</span>
-                    <p class="timeline-item__text">
-                      <a
-                        class="badge"
-                        href="https://www.credly.com/badges/eeaff33c-0355-443f-811e-3bf9bb6c6460/public_url"
-                        title="AWS Educate Web Builder"
-                        target="_blank"
-                      >
-                        <img
-                          class="badge__image"
-                          src="https://images.credly.com/size/200x200/images/b7695469-4083-4e65-b11b-ffc90f4492dd/image.png"
-                        />
-                      </a>
-                      <a
-                        class="badge"
-                        href="https://www.credly.com/badges/dd2b95c6-ed89-4106-ab8d-822fa505ebf3/public_url"
-                        title="AWS Knowledge: Architecting"
-                        target="_blank"
-                      >
-                        <img
-                          class="badge__image"
-                          src="https://images.credly.com/size/200x200/images/519a6dba-f145-4c1a-85a2-1d173d6898d9/image.png"
-                        />
-                      </a>
-                      <a
-                        class="badge"
-                        href="https://www.credly.com/badges/9fdbdf7f-64e6-40fc-8d2f-a25ffe9d2ae6/public_url"
-                        title="AWS Partner: Accreditation (Technical)"
-                        target="_blank"
-                      >
-                        <img
-                          class="badge__image"
-                          src="https://images.credly.com/size/200x200/images/81f903ed-c3a1-4f4b-afcd-e03331a5b12c/image.png"
-                        />
-                      </a>
-                    </p>
-                  </li>
-                  <li class="timeline-item">
-                    <h4 class="h4 timeline-item-title">
-                      Applied Plotting, Charting & Data Representation in Python
-                    </h4>
-                    <span>August 13, 2020</span>
-                    <p class="timeline-item__text">
-                      University of Michigan - Coursera
-                    </p>
-                  </li>
-                  <li class="timeline-item">
-                    <h4 class="h4 timeline-item-title">
-                      Version Control with Git
-                    </h4>
-                    <span>July 20, 2020</span>
-                    <p class="timeline-item__text">Atlassian - Coursera</p>
-                  </li>
-                  <li class="timeline-item">
-                    <h4 class="h4 timeline-item-title">
-                      Introduction to Data Science in Python
-                    </h4>
-                    <span>July 16, 2020</span>
-                    <p class="timeline-item__text">
-                      University of Michigan - Coursera
-                    </p>
-                  </li>
-                </ol>
-              </div>
-            </article>
+            </div>
           </div>
         </div>
       </section>
