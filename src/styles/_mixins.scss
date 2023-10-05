@@ -1,0 +1,35 @@
+// _mixins.scss
+
+@mixin backdrop-blur($value) {
+  backdrop-filter: blur($value);
+  -webkit-backdrop-filter: blur($value);
+}
+
+@mixin radial-background($size, $color1, $color2) {
+  background: radial-gradient(
+    $size circle at var(--mouse-x) var(--mouse-y), 
+    $color1, 
+    $color2 40%
+  );
+}
+
+@mixin hover-background-opacity {
+  &:hover > &__border {
+    opacity: 1;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+@mixin background-border-setup {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  transition: opacity 500ms;
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
