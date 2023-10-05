@@ -1,5 +1,3 @@
-// _mixins.scss
-
 @mixin backdrop-blur($value) {
   backdrop-filter: blur($value);
   -webkit-backdrop-filter: blur($value);

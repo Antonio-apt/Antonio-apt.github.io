@@ -36,7 +36,7 @@
       color: transparent;
       margin-left: 1rem;
       -webkit-text-stroke-width: 0.5px;
-     -webkit-text-stroke-color: #ffc512;
+      -webkit-text-stroke-color: $clr-yellow;
       &:last-child {
         display: flex;
         justify-content: space-between;

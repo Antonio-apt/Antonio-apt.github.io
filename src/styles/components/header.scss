@@ -60,7 +60,7 @@
         border-radius: 13px;
         cursor: pointer;
         &.selected {
-          background-color: #ffc412dd;
+          background-color: $clr-opaque-yellow;
         }
 
         @include hover-background-opacity;
