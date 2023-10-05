@@ -55,7 +55,7 @@ $container-width: 1440px;
           span {
             display: block;
             color: black;
-            background-color: #ffc512;
+            background-color: $clr-yellow;
             white-space: nowrap;
             padding: 0 20px;
           }

@@ -4,34 +4,7 @@
   margin-inline: auto;
   align-items: stretch;
   margin-top: 15dvh;
-  &__header {
-    position: sticky;
-    margin-bottom: 10dvh;
-    #{ $self }__title {
-      font-size: 5em;
-      font-weight: normal;
-      text-transform: uppercase;
-      padding-left: 5rem;
-      &::after,
-      &::before {
-        position: absolute;
-        top: 0;
-        width: 15%;
-        height: 100%;
-        content: "";
-      }
-    }
-    .separator {
-      position: relative;
-      height: 1px;
-      border-radius: 2px;
-      margin: 30px 0;
-      width: 100%;
-      background: #ffc512;
-      will-change: transform;
-      z-index: 1;
-    }
-  }
+  @include section-header;
   &__main-container {
     display: flex;
     flex-direction: column;
@@ -71,18 +44,18 @@
       height: 100px;
       width: 100px;
       border-radius: 25%;
-      background-color: #ffc512;
+      background-color: $clr-yellow;
     }
     #{ $self }__name {
-      color: #fff;
+      color: $clr-white;
       font-size: 26px;
       font-weight: 500;
       letter-spacing: -0.25px;
       margin-bottom: 10px;
     }
     #{ $self }__title {
-      color: white;
-      background: #ffc512;
+      color: $clr-white;
+      background: $clr-yellow;
       font-size: 13px;
       font-weight: 600;
       width: max-content;
@@ -96,7 +69,7 @@
       border-radius: 2px;
       margin: 32px 0;
       width: 100%;
-      background: #ffc512;
+      background: $clr-yellow;
       &:last-of-type {
         opacity: 0;
       }
@@ -116,8 +89,8 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          background: #ffc512;
-          color: #fff;
+          background: $clr-yellow;
+          color: $clr-white;
           width: 48px;
           height: 48px;
           border-radius: 12px;
@@ -126,7 +99,7 @@
         #{ $self }__contact-info {
           font-style: normal;
           #{ $self }__contact-title {
-            color: #fff;
+            color: $clr-white;
             font-size: 12px;
             text-transform: uppercase;
             margin-bottom: 2px;
@@ -138,7 +111,7 @@
             font-weight: 300;
             text-decoration: none;
             font-size: 14px;
-            color: #fff;
+            color: $clr-white;
           }
           address {
             font-size: 14px;
@@ -158,7 +131,7 @@
       #{ $self }__social-item {
         list-style: none;
         #{ $self }__social-link {
-          color: white;
+          color: $clr-white;
           font-size: 20px;
         }
       }
@@ -180,7 +153,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        background: #ffc512;
+        background: $clr-yellow;
         border-radius: 3px;
       }
     }
@@ -197,7 +170,7 @@
         .icon-box {
           position: relative;
           display: flex;
-          background: #ffc512;
+          background: $clr-yellow;
           justify-content: center;
           align-items: center;
           width: 48px;
@@ -209,7 +182,7 @@
             content: "";
             position: absolute;
             inset: 1px;
-            background: #fccc3b;
+            background: $clr-3b-yellow;
             border-radius: inherit;
             z-index: -1;
           }
@@ -235,7 +208,7 @@
           }
           &__title {
             .company-name {
-              color: #fccc3b;
+              color: $clr-3b-yellow;
               text-decoration: none;
             }
           }
@@ -252,7 +225,7 @@
             left: -50px;
             width: 1px;
             height: calc(100% + 65px);
-            background: #fccc3b;
+            background: $clr-3b-yellow;
           }
           &::after {
             content: "";
@@ -261,9 +234,9 @@
             left: -53px;
             height: 8px;
             width: 8px;
-            background: #b18708;
+            background: $clr-dark-yellow;
             border-radius: 50%;
-            box-shadow: 0 0 0 4px #efc958;
+            box-shadow: 0 0 0 4px $clr-3b-yellow;
           }
         }
       }

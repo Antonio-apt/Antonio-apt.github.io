@@ -36,7 +36,7 @@
       color: transparent;
       margin-left: 1rem;
       -webkit-text-stroke-width: 0.5px;
-     -webkit-text-stroke-color: #ffc512;
+      -webkit-text-stroke-color: $clr-yellow;
       &:last-child {
         display: flex;
         justify-content: space-between;
@@ -48,7 +48,7 @@
           margin-right: 4rem;
           &__link {
             text-decoration: none;
-            color: white;
+            color: $clr-white;
             font-size: 30px;
             &:hover {
               color: rgb(159, 159, 159);

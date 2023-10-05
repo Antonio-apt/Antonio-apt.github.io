@@ -8,6 +8,7 @@
 @import "./components/footer.scss";
 @import "./components/section.scss";
 @import "./components/stack.scss";
+@import "./components/articles.scss";
 @import "./components/card.scss";
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @font-face {
@@ -24,14 +25,11 @@
 }
 
 html {
-  // &::-webkit-scrollbar {
-  //   display: none;
-  // }
   scroll-behavior: smooth;
   body {
     font-family: "General Sans", sans-serif;
     background-color: $bg-dark;
-    color: $clr-light;
+    color: $clr-white;
     canvas {
       position: fixed;
       display: block;
@@ -78,12 +76,6 @@ html {
         opacity: 1;
       }
     }
-    // main {
-    //   min-height: 100vh;
-    //   position: relative;
-    //   z-index: 1;
-    //   // margin-bottom: 100vh
-    // }
   }
 
   @media (max-width: $to-small) {

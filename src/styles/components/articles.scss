@@ -1,0 +1,4 @@
+.articles {
+  $self: &;
+  @include section-header;
+}

@@ -1,0 +1,62 @@
+@mixin backdrop-blur($value) {
+  backdrop-filter: blur($value);
+  -webkit-backdrop-filter: blur($value);
+}
+
+@mixin radial-background($size, $color1, $color2) {
+  background: radial-gradient(
+    $size circle at var(--mouse-x) var(--mouse-y), 
+    $color1, 
+    $color2 40%
+  );
+}
+
+@mixin hover-background-opacity {
+  &:hover > &__border {
+    opacity: 1;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+@mixin background-border-setup {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  transition: opacity 500ms;
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+@mixin section-header {
+    position: sticky;
+    margin-bottom: 10dvh;
+    &__title {
+      font-size: 5em;
+      font-weight: normal;
+      text-transform: uppercase;
+      padding-left: 5rem;
+      &::after,
+      &::before {
+        position: absolute;
+        top: 0;
+        width: 15%;
+        height: 100%;
+        content: "";
+      }
+    }
+    .separator {
+      position: relative;
+      height: 1px;
+      border-radius: 2px;
+      margin: 30px 0;
+      width: 100%;
+      background: $clr-yellow;
+      will-change: transform;
+      z-index: 1;
+    }
+}
