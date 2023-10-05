@@ -54,7 +54,7 @@
       margin-bottom: 10px;
     }
     #{ $self }__title {
-      color: white;
+      color: $clr-white;
       background: $clr-yellow;
       font-size: 13px;
       font-weight: 600;
@@ -131,7 +131,7 @@
       #{ $self }__social-item {
         list-style: none;
         #{ $self }__social-link {
-          color: white;
+          color: $clr-white;
           font-size: 20px;
         }
       }

@@ -1,4 +1,4 @@
-$bg-dark: #363946;
+$bg-dark: #111212;
 
 
 $clr-purple: #B2A4FF;
@@ -7,7 +7,7 @@ $clr-yellow: #FFC512;
 $clr-3b-yellow: #FCCC3B;
 $clr-dark-yellow: #B18708;
 $clr-opaque-yellow: #FFC412DD;
-$clr-white: #FFFFFF;
+$clr-white: #f1e6e6;
 $clr-black: #272727;
 
 
@@ -22,16 +22,8 @@ $font-sans-serif: Arial, sans-serif;
 $font-size:   16px;
 $line-height: calc(24px / $font-size);
 $font-family: $font-sans-serif;
-$color:       #222222;
 $font-neue-montreal: 'Neue Montreal';
-// Headings
-$font-size-h1:  13.5vw  !default;
-$font-size-h2:  32px  !default;
-$font-size-h3:  24px  !default;
-$font-size-h4:  16px  !default;
-$font-size-h5:  16px  !default;
-$font-size-h6:  15px  !default;
-$line-height-h: $line-height;
+
 
 // Weights
 $light:  300;
@@ -40,15 +32,6 @@ $medium: 500;
 $semi-bold: 600;
 $bold:   700;
 
-// Spacing Units
-// =============================================================================
-$unit:       60px;
-$unit-small: 40px;
-
-// Container
-// ==========================================================================
-$container-width: 1440px;
-$padding:         $unit;
 
 // Breakpoints
 // =============================================================================
