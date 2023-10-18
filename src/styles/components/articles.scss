@@ -1,4 +1,13 @@
 .articles {
   $self: &;
   @include section-header;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      margin-top: 3rem;
+      font-size: 3em;
+    }
+  }
 }

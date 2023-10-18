@@ -1,29 +1,224 @@
 .header {
   $self: &;
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 3rem;
+  height: 100%;
   width: 100%;
-  background-color: transparent;
-  border-radius: 25px;
-  z-index: 1;
+  @media (min-width: $from-small) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    height: 3rem;
+    width: 100%;
+    border-radius: 25px;
+    z-index: 1;
+    &__actions--mobile {
+      display: none;
+    }
+  }
+  &__actions--mobile {
+    overflow: hidden;
+    .main-nav {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      text-align: center;
+      background: transparent;
+      @include backdrop-blur(8px);
+      opacity: 0;
+      z-index: -1;
+      visibility: hidden;
+      transition: all 0.375s;
+    }
+
+    .main-nav.is-open {
+      opacity: 1;
+      z-index: 100;
+      visibility: visible;
+    }
+    .main-nav::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: -15px;
+      background: $clr-yellow;
+      transform-origin: 0 0;
+      transform: skew(-14deg) translateX(-120%);
+      transition: all 0.275s 0.1s;
+    }
+
+    .main-nav.is-open::before {
+      transform: skew(-14deg) translateX(0);
+    }
+
+    .main-nav ul {
+      display: inline-flex;
+      flex-direction: column;
+      height: 90%;
+      align-items: flex-end;
+      justify-content: center;
+      transform: translateX(-18%) skew(-16deg);
+    }
+
+    .main-nav li {
+      display: block;
+      margin: 0.5rem 0;
+      text-align: right;
+      transform: skew(16deg);
+    }
+
+    .main-nav a {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    .main-nav.is-open a {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .main-nav li:nth-child(1) a {
+      transition: all 275ms 175ms;
+    }
+    .main-nav li:nth-child(2) a {
+      transition: all 275ms 225ms;
+    }
+    .main-nav li:nth-child(3) a {
+      transition: all 275ms 275ms;
+    }
+
+    .main-nav ul,
+    .main-nav li {
+      list-style: none;
+      padding: 0;
+    }
+    .main-nav a {
+      display: block;
+      padding: 12px 0;
+      color: $clr-black;
+      font-size: 1.4em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .open-main-nav {
+      position: absolute;
+      top: 15px;
+      padding-top: 20px;
+      right: 15px;
+      z-index: 1000;
+      background: none;
+      border: 0;
+      cursor: pointer;
+    }
+    .open-main-nav:focus {
+      outline: none;
+    }
+    .burger {
+      position: relative;
+      display: block;
+      width: 28px;
+      height: 4px;
+      margin: 0 auto;
+      background: $clr-white;
+      transition: all 0.275s;
+    }
+
+    .burger:after,
+    .burger:before {
+      content: "";
+      display: block;
+      height: 100%;
+      background: $clr-white;
+      transition: all 0.275s;
+    }
+
+    .burger:after {
+      transform: translateY(-12px);
+    }
+
+    .burger:before {
+      transform: translateY(-16px);
+    }
+
+    .is-open .burger:after {
+      display: none;
+    }
+
+    .is-open .burger {
+      transform: skew(5deg) translateY(-8px) rotate(-45deg);
+    }
+    .is-open .burger:before {
+      transform: translateY(0px) skew(-10deg) rotate(75deg);
+    }
+  }
+  &__translate-section {
+    margin-left: auto;
+    height: 2.5rem;
+    &:hover > .lang-button > .lang-button__border {
+      opacity: 1;
+    }
+    .lang-button {
+      @include backdrop-blur(4px);
+      position: relative;
+      height: inherit;
+      width: 6rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      text-align: center;
+      border-radius: 13px;
+      cursor: pointer;
+      &.selected {
+        background-color: $clr-opaque-yellow;
+      }
+
+      @include hover-background-opacity;
+
+      &::before {
+        z-index: 3;
+        @include background-border-setup;
+      }
+
+      &__border {
+        @include radial-background(150px, rgba(181, 164, 11, 0.5), transparent);
+        z-index: 1;
+        @include background-border-setup;
+      }
+
+      &__text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(23, 23, 23, 0.6);
+        border-radius: inherit;
+        margin: 1px;
+        height: calc(100% - 2px);
+        width: calc(100% - 2px);
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
   &__actions {
+    display: none;
     @include backdrop-blur(8px);
     position: fixed;
-    display: flex;
     align-items: center;
     margin-right: 2rem;
     gap: 8px;
     min-width: 60%;
     height: 2.5rem;
     padding: 1rem;
-    border: 1px hsla(0,0%,100%,.16) solid;
+    border: 1px hsla(0, 0%, 100%, 0.16) solid;
     background-color: transparent;
     top: 0.5rem;
     border-radius: 25px;
     transition: all 0.2s ease-in-out;
+    @media (min-width: $from-small) {
+      display: flex;
+    }
     &.hide {
       top: -5rem;
     }
@@ -44,52 +239,5 @@
         }
       }
     }
-    #{ $self }__translate-section {
-      margin-left: auto;
-      height: inherit;
-      &:hover > .lang-button > .lang-button__border{
-        opacity: 1;
-      }
-      .lang-button {
-        @include backdrop-blur(4px);
-        position: relative;
-        height: inherit;
-        width: 6rem;
-        background-color: rgba(255, 255, 255, 0.1);
-        text-align: center;
-        border-radius: 13px;
-        cursor: pointer;
-        &.selected {
-          background-color: $clr-opaque-yellow;
-        }
-
-        @include hover-background-opacity;
-
-        &::before {
-          z-index: 3;
-          @include background-border-setup;
-        }
-
-        &__border {
-          @include radial-background(150px, rgba(181, 164, 11, 0.5), transparent);
-          z-index: 1;
-          @include background-border-setup;
-        }
-
-        &__text {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: rgb(23, 23, 23, 0.6);
-          border-radius: inherit;
-          margin: 1px;
-          height: calc(100% - 2px);
-          width: calc(100% - 2px);
-          position: relative;
-          z-index: 2;
-        }
-      }
-    }
   }
 }
-
