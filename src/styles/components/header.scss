@@ -3,6 +3,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
+  z-index: 1;
   @media (min-width: $from-small) {
     display: flex;
     align-items: center;
@@ -11,13 +12,15 @@
     height: 3rem;
     width: 100%;
     border-radius: 25px;
-    z-index: 1;
     &__actions--mobile {
       display: none;
     }
   }
   &__actions--mobile {
     overflow: hidden;
+    position: fixed;
+    height: 100dvh;
+    width: 100dvw;
     .main-nav {
       position: absolute;
       top: 0;
