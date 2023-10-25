@@ -19,8 +19,9 @@
   &__actions--mobile {
     overflow: hidden;
     position: fixed;
-    height: 100dvh;
+    min-height: 2.5rem;
     width: 100dvw;
+    height: fit-content;
     .main-nav {
       position: absolute;
       top: 0;

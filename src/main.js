@@ -13,24 +13,42 @@ animateScroll.init();
 addGlow(".header__translate-section", "lang-button");
 addGlow("main", "card");
 
-let burger = document.getElementById('burger');
-let nav = document.getElementById('main-nav');
+(function() {
+  let burger = document.getElementById('burger');
+  let nav = document.getElementById('main-nav');
+  let headerActionsMobile = document.querySelector('.header__actions--mobile');
 
-burger.addEventListener('click', function(e){
-	this.classList.toggle('is-open');
-	nav.classList.toggle('is-open');
-});
+  if (!burger || !nav || !headerActionsMobile) {
+      return;
+  }
 
-/* Onload demo - dirty timeout */
-let clickEvent = new Event('click');
+  burger.addEventListener('click', toggleMenu);
 
-window.addEventListener('load', function(e) {
-	burger.dispatchEvent(clickEvent);
-	
-	setTimeout(function(){
-		burger.dispatchEvent(clickEvent);
-	}, 5500);
-});
+  function toggleMenu() {
+      let isOpen = burger.classList.toggle('is-open');
+      nav.classList.toggle('is-open');
+
+      if (isOpen) {
+          headerActionsMobile.style.height = '100vh';
+      } else {
+          setTimeout(function() {
+              headerActionsMobile.style.height = '';
+          }, 500); 
+      }
+  }
+
+  let navItems = nav.querySelectorAll('a');
+  navItems.forEach(item => {
+      item.addEventListener('click', function() {
+          if (burger.classList.contains('is-open')) {
+              toggleMenu();
+          }
+      });
+  });
+})();
+
+
+
 
 
 (() => {
