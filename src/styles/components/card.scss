@@ -22,7 +22,10 @@
     border-radius: inherit;
     margin: 1px;
     position: relative;
-    padding: 30px;
+    padding: 1rem;
     z-index: 2;
+    @media (min-width: $from-small) {
+      padding: 1.875rem;
+    }
   }
 }

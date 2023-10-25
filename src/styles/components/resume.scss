@@ -23,7 +23,6 @@
 
 .sidebar {
   $self: &;
-  position: sticky;
   top: 1rem;
   margin-bottom: 15px;
   height: fit-content;
@@ -200,6 +199,7 @@
             text-decoration: none;
             width: 100px;
             height: 100px;
+            cursor: pointer;
             &__image {
               width: inherit;
               height: inherit;
@@ -214,6 +214,7 @@
           }
           &__text {
             text-align: justify;
+            padding: 0 2rem 1rem 0;
           }
           &:not(:last-child) {
             margin-bottom: 30px;
@@ -264,5 +265,8 @@
         flex-direction: row;
       }
     }
+  }
+  .sidebar {
+    position: sticky;
   }
 }

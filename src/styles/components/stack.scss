@@ -67,12 +67,14 @@
     }
   }
   .stack-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 85dvw;
-    padding: 1rem;
     margin-top: 20dvh;
-    margin-inline: auto;
+    @media (min-width: $from-small) {
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 85dvw;
+      padding: 1rem;
+    }
     .stack-icons {
       $self: &;
       position: relative;
@@ -89,6 +91,10 @@
         .stack-icons__title {
           font-weight: normal;
           font-size: 2em;
+          padding: 1.9rem;
+          @media (min-width: $from-small) {
+            padding: 0;
+          }
           &::after {
             content: "";
             position: absolute;
@@ -109,10 +115,15 @@
       &__items {
         color: black;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 20px 0px;
-        padding: 3rem 2rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px 0px;
+        padding: 1rem;
         transform: translateZ(20px);
+        @media (min-width: $from-small) {
+          gap: 20px 0px;
+          padding: 3rem 2rem;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
         .stack-icons__item {
           display: flex;
           flex-direction: column;
@@ -149,7 +160,9 @@
       color: black;
       background-color: $clr-yellow;
       box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-      border-radius: 7px;
+      @media (min-width: $from-small) {
+        border-radius: 7px;
+      }
       margin-left: -1rem;
       &__title {
         align-self:  end;
