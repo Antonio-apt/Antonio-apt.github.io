@@ -31,6 +31,17 @@
       z-index: -1;
       visibility: hidden;
       transition: all 0.375s;
+      .lang-button {
+        @include backdrop-blur(4px);
+        &.selected {
+          background-color: $clr-opaque-white;
+        }
+        // &__text {
+        //   background-color: rgba(173, 166, 166, 0.133);
+        //   color: $clr-black;
+        //   font-weight: bold;
+        // }
+      }
     }
 
     .main-nav.is-open {
@@ -46,6 +57,7 @@
       left: 0;
       right: -15px;
       background: $clr-yellow;
+      @include backdrop-blur(8px);
       transform-origin: 0 0;
       transform: skew(-14deg) translateX(-120%);
       transition: all 0.275s 0.1s;
@@ -79,6 +91,7 @@
     .main-nav.is-open a {
       opacity: 1;
       transform: translateY(0);
+      font-size: 2em;
     }
     .main-nav li:nth-child(1) a {
       transition: all 275ms 175ms;
