@@ -5,7 +5,7 @@ export default class AnimateScroll {
     this.sections = document.querySelectorAll(sections);
     this.windowHalf = Math.floor(window.innerHeight * 0.6);
 
-    this.animate = debounce(this.animate.bind(this));
+    this.animate = debounce(this.animate.bind(this), 50);
   }
 
   init() {
@@ -21,15 +21,17 @@ export default class AnimateScroll {
   }
 
   getDistances() {
+    const yOffset = window.pageYOffset || window.scrollY;
     this.distances = [...this.sections].map((section) => ({
       el: section,
-      offset: section.offsetTop - this.windowHalf,
+      offset: section.getBoundingClientRect().top + yOffset - this.windowHalf,
     }));
   }
 
   animate() {
+    const currentY = window.pageYOffset || window.scrollY;
     this.distances.forEach((dist) => {
-      if (window.scrollY > dist.offset) {
+      if (currentY > dist.offset) {
         dist.el.classList.add('active');
       } else if (dist.el.classList.contains('active')) {
         dist.el.classList.remove('active');
