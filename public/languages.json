@@ -18,7 +18,9 @@
     "compass": "At Compass, part of the UOL group and specializes in delivering high-quality digital experiences, service integration, and solutions, I work as a Web Developer. Currently engaged in a project for Vivo. My approach aligns with agile methodologies, ensuring quality through testing and collaboration with specialized teams. Furthermore, I provide support and develop solutions within the Adobe Experience Manager (AEM) environment, including integrations with external systems, while overseeing the development of essential components and services. I also utilize Java and Vue.js.",
     "compass-date": "March 2022 - Present",
     "usp": "Bachelor's degree, Information System",
-    "etec": "Technical High School, Internet Computing"
+    "etec": "Technical High School, Internet Computing",
+    "footnote": "This website is currently under construction and refinement. Soon, it will serve as a repository where I'll share my professional experiences, portfolio of works, and insightful articles. If you're interested in collaborating, partnering, or just discussing ideas, please don't hesitate to get in touch with me.",
+    "github-code": "If you have any suggestions or encounter any bugs:"
   },
   "pt": {
     "hello": "Ola, Eu sou o",
@@ -39,7 +41,8 @@
     "compass": "Na Compass, uma empresa do grupo UOL focada em experiência digital, atuo como Desenvolvedor Web. Atualmente, estou engajado em um projeto para a Vivo. Minha abordagem adere às metodologias ágeis, assegurando qualidade por meio de testes e colaboração com equipes especializadas. Adicionalmente, ofereço suporte e desenvolvimento de soluções no ambiente Adobe Experience Manager (AEM), com integrações em sistemas externos. Paralelamente, supervisiono o desenvolvimento de componentes e serviços essenciais, utilizando tecnologias como Java e Vue.js.",
     "compass-date": "Março 2022 - o momento",
     "usp": "Bacharelado, Sistemas de Informação",
-    "etec": "Técnico, Informática para internet"
-
+    "etec": "Técnico, Informática para internet",
+    "footnote": "Atualmente, este site está em fase de construção e aprimoramento. Em breve, ele será o repositório onde compartilharei minhas experiências profissionais, portfólio de trabalhos e artigos relevantes. Se desejar colaborar, fazer parcerias ou simplesmente trocar uma ideia, não hesite em entrar em contato comigo.",
+    "github-code": "Se você tiver alguma sugestão ou encontrar algum bug:"
   }
 }
