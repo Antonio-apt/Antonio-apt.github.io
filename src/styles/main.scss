@@ -49,6 +49,9 @@ html {
       cursor: pointer;
       outline: inherit;
     }
+    a {
+      text-decoration: none;
+    }
     [data-anime='scroll'] {
       opacity: 0;
       transform: translate3d(-30px, 0, 0);
