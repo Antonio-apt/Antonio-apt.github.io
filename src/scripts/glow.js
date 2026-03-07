@@ -3,11 +3,9 @@ const addGlow = (container, elementClassName) => {
   if (!containerEl) return;
 
   containerEl.addEventListener("mousemove", handleMove);
-  containerEl.addEventListener("touchmove", handleMove);
+  containerEl.addEventListener("touchmove", handleMove, { passive: true });
 
   function handleMove(e) {
-    e.preventDefault();
-
     const position = e.touches ? e.touches[0] : e;
     const x = position.clientX;
     const y = position.clientY;

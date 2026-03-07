@@ -55,7 +55,7 @@ function init() {
   window.addEventListener('resize', onWindowResize, false);
 
   main.addEventListener('mousemove', onMouseMove, false);
-  main.addEventListener('touchmove', onTouchMove, false);
+  main.addEventListener('touchmove', onTouchMove, { passive: true });
 
   document.addEventListener('visibilitychange', onVisibilityChange);
 
@@ -88,12 +88,10 @@ function setCameraPosition(event) {
 }
 
 function onMouseMove(event) {
-  event.preventDefault();
   setCameraPosition(event);
 }
 
 function onTouchMove(event) {
-  event.preventDefault();
   setCameraPosition(event.touches[0]);
 }
 

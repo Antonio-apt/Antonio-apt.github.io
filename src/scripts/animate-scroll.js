@@ -21,7 +21,7 @@ export default class AnimateScroll {
   }
 
   getDistances() {
-    const yOffset = window.pageYOffset || window.scrollY;
+    const yOffset = window.scrollY;
     this.distances = [...this.sections].map((section) => ({
       el: section,
       offset: section.getBoundingClientRect().top + yOffset - this.windowHalf,
@@ -29,7 +29,7 @@ export default class AnimateScroll {
   }
 
   animate() {
-    const currentY = window.pageYOffset || window.scrollY;
+    const currentY = window.scrollY;
     this.distances.forEach((dist) => {
       if (currentY > dist.offset) {
         dist.el.classList.add('active');
