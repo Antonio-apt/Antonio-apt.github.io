@@ -1,4 +1,4 @@
-import debounce from './debouce';
+import debounce from './debounce';
 
 export default class AnimateScroll {
   constructor(sections) {

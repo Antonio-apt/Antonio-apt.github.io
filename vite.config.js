@@ -2,5 +2,5 @@ import { defineConfig } from 'vite'
 // import path from 'path'
 
 export default defineConfig({
-  // base: '/Antonio-apt.github.io/'
+  base: '/Antonio-apt.github.io/'
 })

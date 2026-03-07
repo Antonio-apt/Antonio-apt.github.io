@@ -1,5 +1,6 @@
 const addGlow = (container, elementClassName) => {
   const containerEl = document.querySelector(container);
+  if (!containerEl) return;
 
   containerEl.addEventListener("mousemove", handleMove);
   containerEl.addEventListener("touchmove", handleMove);

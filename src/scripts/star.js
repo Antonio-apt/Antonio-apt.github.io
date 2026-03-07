@@ -1,8 +1,15 @@
 import * as THREE from 'three';
 
+const { BASE_URL } = import.meta.env;
+
 let scene, camera, renderer, stars, starGeo, initialRotation;
+let animationId = null;
 
 function init() {
+  const body = document.querySelector('body');
+  const main = document.querySelector('main');
+  if (!body || !main) return;
+
   scene = new THREE.Scene();
 
   camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
@@ -12,7 +19,7 @@ function init() {
   initialRotation = camera.rotation.clone();
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
-  document.querySelector('body').appendChild(renderer.domElement);
+  body.appendChild(renderer.domElement);
 
   starGeo = new THREE.BufferGeometry();
   const positions = [];
@@ -25,7 +32,16 @@ function init() {
   }
   starGeo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
 
-  let sprite = new THREE.TextureLoader().load('/star.png');
+  const textureUrl = `${BASE_URL || ""}star.png`;
+  const textureLoader = new THREE.TextureLoader();
+  const sprite = textureLoader.load(
+    textureUrl,
+    undefined,
+    undefined,
+    (err) => {
+      console.warn("Star texture failed to load:", err);
+    }
+  );
   let starMaterial = new THREE.PointsMaterial({
     color: 0xaaaaaa,
     size: 0.7,
@@ -38,10 +54,23 @@ function init() {
 
   window.addEventListener('resize', onWindowResize, false);
 
-  document.querySelector('main').addEventListener('mousemove', onMouseMove, false);
-  document.querySelector('main').addEventListener('touchmove', onTouchMove, false);
+  main.addEventListener('mousemove', onMouseMove, false);
+  main.addEventListener('touchmove', onTouchMove, false);
+
+  document.addEventListener('visibilitychange', onVisibilityChange);
 
   animate();
+}
+
+function onVisibilityChange() {
+  if (document.hidden) {
+    if (animationId != null) {
+      cancelAnimationFrame(animationId);
+      animationId = null;
+    }
+  } else if (animationId == null && starGeo && stars) {
+    animate();
+  }
 }
 
 function onWindowResize(event) {
@@ -69,6 +98,7 @@ function onTouchMove(event) {
 }
 
 function animate() {
+  if (!starGeo || !stars) return;
   const positions = starGeo.attributes.position.array;
   for (let i = 0; i < positions.length; i += 3) {
     let x = positions[i];
@@ -84,7 +114,9 @@ function animate() {
   stars.rotation.y += 0.002;
 
   renderer.render(scene, camera);
-  requestAnimationFrame(animate);
+  if (!document.hidden) {
+    animationId = requestAnimationFrame(animate);
+  }
 }
 
 export default init;

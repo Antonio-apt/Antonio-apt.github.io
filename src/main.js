@@ -3,9 +3,6 @@ import initTranslations from "./scripts/i18n";
 import init from "./scripts/star";
 import addGlow from "./scripts/glow";
 import AnimateScroll from "./scripts/animate-scroll";
-import MouseHoverTilt from "./scripts/tilt";
-
-const { BASE_URL } = import.meta.env;
 
 const animateScroll = new AnimateScroll("[data-anime='scroll']");
 animateScroll.init();
@@ -16,24 +13,29 @@ addGlow("main", "card");
 (function() {
   let burger = document.getElementById('burger');
   let nav = document.getElementById('main-nav');
-  let headerActionsMobile = document.querySelector('.header__actions--mobile');
 
-  if (!burger || !nav || !headerActionsMobile) {
+  if (!burger || !nav) {
       return;
   }
 
   burger.addEventListener('click', toggleMenu);
 
-  function toggleMenu() {
+  function toggleMenu(restoreFocusToBurger) {
       let isOpen = burger.classList.toggle('is-open');
       nav.classList.toggle('is-open');
 
+      burger.setAttribute('aria-expanded', isOpen);
+      burger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+
       if (isOpen) {
-          headerActionsMobile.style.height = '100vh';
+          nav.style.height = '100vh';
+          var firstLink = nav.querySelector('a');
+          if (firstLink) firstLink.focus();
       } else {
           setTimeout(function() {
-              headerActionsMobile.style.height = '';
-          }, 500); 
+              nav.style.height = '';
+              if (restoreFocusToBurger !== false) burger.focus();
+          }, 500);
       }
   }
 
@@ -41,7 +43,7 @@ addGlow("main", "card");
   navItems.forEach(item => {
       item.addEventListener('click', function() {
           if (burger.classList.contains('is-open')) {
-              toggleMenu();
+              toggleMenu(false);
           }
       });
   });
@@ -60,7 +62,8 @@ addGlow("main", "card");
   var direction = 0;
   var prevDirection = 0;
 
-  var header = document.querySelector(".header__actions");
+  var header = document.querySelector(".header");
+  if (!header) return;
 
   var checkScroll = function () {
     curScroll = w.scrollY || doc.scrollTop;

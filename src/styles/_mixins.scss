@@ -1,3 +1,9 @@
+@use "sass:math";
+
+@function rem($px) {
+  @return math.div($px, 16px) * 1rem;
+}
+
 @mixin backdrop-blur($value) {
   backdrop-filter: blur($value);
   -webkit-backdrop-filter: blur($value);
