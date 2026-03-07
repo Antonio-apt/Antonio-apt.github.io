@@ -59,6 +59,7 @@ const initTranslations = () => {
         fallbackLng: "en",
       },
       () => {
+        document.documentElement.lang = i18next.language;
         const elements = document.querySelectorAll("[data-i18n]");
         applyTranslations(elements, languages);
 
@@ -70,6 +71,7 @@ const initTranslations = () => {
             const locale = e.currentTarget.dataset.locale;
             if (!locale) return;
             i18next.changeLanguage(locale);
+            document.documentElement.lang = locale;
             applyTranslations(elements, languages);
             updateLangButtonsState(langButtons, locale);
             try {
