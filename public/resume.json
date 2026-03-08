@@ -1,0 +1,162 @@
+{
+  "sidebar": {
+    "name": "Antonio Souza",
+    "title": "Fullstack developer",
+    "contacts": [
+      {
+        "icon": "mail-outline",
+        "label": { "en": "Email", "pt": "Email" },
+        "value": "antonios16020@gmail.com",
+        "href": "mailto:antonios16020@gmail.com"
+      },
+      {
+        "icon": "location-outline",
+        "label": { "en": "Location", "pt": "Localização" },
+        "value": "São Paulo, BR"
+      }
+    ],
+    "social": [
+      {
+        "icon": "logo-linkedin",
+        "href": "https://www.linkedin.com/in/antoniogsouza/",
+        "ariaLabel": "LinkedIn profile"
+      },
+      {
+        "icon": "logo-github",
+        "href": "https://github.com/Antonio-apt",
+        "ariaLabel": "GitHub profile"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "role": "Web Developer",
+      "company": "Compass.uol",
+      "companyUrl": "https://compass.uol/en/home/",
+      "date": {
+        "en": "March 2022 - Present",
+        "pt": "Março 2022 - o momento"
+      },
+      "description": {
+        "en": "At Compass, part of the UOL group and specializes in delivering high-quality digital experiences, service integration, and solutions, I work as a Web Developer. Currently engaged in a project for Vivo. My approach aligns with agile methodologies, ensuring quality through testing and collaboration with specialized teams. Furthermore, I provide support and develop solutions within the Adobe Experience Manager (AEM) environment, including integrations with external systems, while overseeing the development of essential components and services. I also utilize Java and Vue.js.",
+        "pt": "Na Compass, uma empresa do grupo UOL focada em experiência digital, atuo como Desenvolvedor Web. Atualmente, estou engajado em um projeto para a Vivo. Minha abordagem adere às metodologias ágeis, assegurando qualidade por meio de testes e colaboração com equipes especializadas. Adicionalmente, ofereço suporte e desenvolvimento de soluções no ambiente Adobe Experience Manager (AEM), com integrações em sistemas externos. Paralelamente, supervisiono o desenvolvimento de componentes e serviços essenciais, utilizando tecnologias como Java e Vue.js."
+      }
+    },
+    {
+      "role": "Full-Stack Developer",
+      "company": "Scipopulis",
+      "companyUrl": "https://www.scipopulis.com/",
+      "date": {
+        "en": "August 2021 - March 2022",
+        "pt": "Agosto 2021 - Março 2022"
+      },
+      "description": {
+        "en": "Scipopulis specializes in smart cities and urban mobility. I served as a Full-Stack Developer, spearheading a Meteor.js project. I revitalized the architecture, embracing an event-driven API with WebSockets, enhancing performance while minimizing redundancy. I upgraded the front-end to Vue.js, ensuring real-time data.",
+        "pt": "A Scipopulis foca em cidades inteligentes e mobilidade urbana. Fui Desenvolvedor Full-Stack, liderando um projeto em Meteor.js. Revitalizei a arquitetura, adotando uma API orientada a eventos com WebSockets, impulsionando o desempenho e reduzindo redundâncias. Atualizei o front-end para Vue.js, assegurando dados em tempo real."
+      }
+    },
+    {
+      "role": "Front-End Developer",
+      "company": "MadeinWeb",
+      "companyUrl": "https://madeinweb.com.br/projetos/",
+      "date": {
+        "en": "November 2020 - August 2021",
+        "pt": "Novembro 2020 - Agosto 2021"
+      },
+      "description": {
+        "en": "Roughly a year later, I transitioned into the development field and worked as a Front-End developer on over 5 projects catering to medium and large-sized enterprises. I employed frameworks such as Vue, React, and Angular, adhering to the best practices in interface development. I collaborated with cross-functional teams, maintaining close communication with Back-End and Design teams, and also engaged with AWS for cloud computing solutions.",
+        "pt": "Após cerca de um ano, migrei para o campo do desenvolvimento e atuei como desenvolvedor Front-End em mais de 5 projetos para empresas de médio e grande porte. Utilizei frameworks como Vue, React e Angular, aderindo às melhores práticas de desenvolvimento de interface. Colaborei com equipes multidisciplinares, mantendo contato próximo com times de Back-End, Design e trabalhando também com AWS para computação em nuvem."
+      }
+    },
+    {
+      "role": "Quality Assurance",
+      "company": "MadeinWeb",
+      "companyUrl": "https://madeinweb.com.br/projetos/",
+      "date": {
+        "en": "January 2020 - November 2020",
+        "pt": "Janeiro 2020 - Novembro 2020"
+      },
+      "description": {
+        "en": "MadeinWeb is a company specialized in web and mobile solutions development, with a focus on achieving tangible results for clients. It was there that I gained my first experience right after completing my technical course. My responsibilities involved conducting tests, monitoring project progress, and collaborating with clients to understand and filter their demands. Working in synergy with cross-functional teams, I absorbed valuable insights into best practices and the key tools utilized by each domain, which proved to be fundamental for the outset of my career.",
+        "pt": "A MadeinWeb é uma empresa especializada no desenvolvimento de soluções web e mobile, com ênfase em alcançar resultados concretos para os clientes. Foi lá que obtive minha primeira experiência logo após concluir meu curso técnico. Minhas responsabilidades envolviam a realização de testes, o acompanhamento do progresso dos projetos e a colaboração com os clientes para compreender e filtrar suas demandas. Trabalhando em conjunto com equipes multidisciplinares, absorvi conhecimentos valiosos sobre boas práticas e as principais ferramentas utilizadas por cada área, o que se revelou fundamental para o início da minha carreira."
+      }
+    }
+  ],
+  "certifications": [
+    {
+      "title": "AWS Certified Developer – Associate",
+      "period": "August 25, 2023 - August 25, 2026",
+      "badges": [
+        {
+          "href": "https://www.credly.com/badges/06e299c3-dd80-4e7b-80ae-afe9e5c97b2d/public_url",
+          "title": "AWS Developer",
+          "imgSrc": "https://images.credly.com/size/200x200/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png",
+          "alt": "AWS Certified Developer – Associate badge"
+        },
+        {
+          "href": "https://www.credly.com/badges/fea943a6-7c93-4d9a-8ad7-9b414f10d7f3/public_url",
+          "title": "AWS Cloud Practitioner",
+          "imgSrc": "https://images.credly.com/size/200x200/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
+          "alt": "AWS Certified Cloud Practitioner badge"
+        }
+      ]
+    },
+    {
+      "title": "AWS Courses",
+      "period": "Courses and accreditations",
+      "badges": [
+        {
+          "href": "https://www.credly.com/badges/eeaff33c-0355-443f-811e-3bf9bb6c6460/public_url",
+          "title": "AWS Educate Web Builder",
+          "imgSrc": "https://images.credly.com/size/200x200/images/b7695469-4083-4e65-b11b-ffc90f4492dd/image.png",
+          "alt": "AWS Educate Web Builder badge"
+        },
+        {
+          "href": "https://www.credly.com/badges/dd2b95c6-ed89-4106-ab8d-822fa505ebf3/public_url",
+          "title": "AWS Knowledge: Architecting",
+          "imgSrc": "https://images.credly.com/size/200x200/images/519a6dba-f145-4c1a-85a2-1d173d6898d9/image.png",
+          "alt": "AWS Knowledge: Architecting badge"
+        },
+        {
+          "href": "https://www.credly.com/badges/9fdbdf7f-64e6-40fc-8d2f-a25ffe9d2ae6/public_url",
+          "title": "AWS Partner: Accreditation (Technical)",
+          "imgSrc": "https://images.credly.com/size/200x200/images/81f903ed-c3a1-4f4b-afcd-e03331a5b12c/image.png",
+          "alt": "AWS Partner: Accreditation (Technical) badge"
+        }
+      ]
+    },
+    {
+      "title": "Applied Plotting, Charting & Data Representation in Python",
+      "period": "August 13, 2020",
+      "description": "University of Michigan - Coursera"
+    },
+    {
+      "title": "Version Control with Git",
+      "period": "July 20, 2020",
+      "description": "Atlassian - Coursera"
+    },
+    {
+      "title": "Introduction to Data Science in Python",
+      "period": "July 16, 2020",
+      "description": "University of Michigan - Coursera"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidade de São Paulo",
+      "period": "2020 — 2023",
+      "description": {
+        "en": "Bachelor's degree, Information System",
+        "pt": "Bacharelado, Sistemas de Informação"
+      }
+    },
+    {
+      "institution": "Etec Santa Isabel",
+      "period": "2017 — 2019",
+      "description": {
+        "en": "Technical High School, Internet Computing",
+        "pt": "Técnico, Informática para internet"
+      }
+    }
+  ]
+}

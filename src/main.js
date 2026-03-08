@@ -1,6 +1,7 @@
 import "./styles/main.scss";
 import "./scripts/tilt";
 import initTranslations from "./scripts/i18n";
+import initResume from "./scripts/resume";
 import initStars from "./scripts/star";
 import addGlow from "./scripts/glow";
 import AnimateScroll from "./scripts/animate-scroll";
@@ -17,4 +18,5 @@ initBurger();
 initHeader();
 initCarousel();
 initTranslations();
+initResume();
 initStars();

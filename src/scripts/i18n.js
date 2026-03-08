@@ -1,4 +1,5 @@
 import i18next from "i18next";
+import { renderResume } from "./resume";
 
 const STORAGE_KEY = "preferred-locale";
 const { BASE_URL } = import.meta.env;
@@ -90,6 +91,7 @@ const initTranslations = () => {
             i18next.changeLanguage(locale);
             document.documentElement.lang = locale;
             applyTranslations(elements, languages);
+            renderResume();
             updateLangButtonsState(langButtons, locale);
             try {
               localStorage.setItem(STORAGE_KEY, locale);
