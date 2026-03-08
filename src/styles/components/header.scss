@@ -4,6 +4,7 @@
   height: 100%;
   width: 100%;
   z-index: 1;
+  pointer-events: none;
   @media (min-width: $from-small) {
     display: flex;
     align-items: center;
@@ -17,11 +18,14 @@
     }
   }
   &__actions--mobile {
+    pointer-events: auto;
     overflow: hidden;
     position: fixed;
+    top: 0;
     min-height: 2.5rem;
     width: 100dvw;
     height: fit-content;
+    transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     .main-nav {
       position: absolute;
       top: 0;
@@ -172,6 +176,14 @@
       transform: translateY(0px) skew(-10deg) rotate(75deg);
     }
   }
+  &.hide {
+    #{$self}__actions {
+      top: -5rem;
+    }
+    #{$self}__actions--mobile {
+      top: -5rem;
+    }
+  }
   &__translate-section {
     margin-left: auto;
     height: 2.5rem;
@@ -219,6 +231,7 @@
     }
   }
   &__actions {
+    pointer-events: auto;
     display: none;
     @include backdrop-blur(8px);
     position: fixed;
@@ -232,12 +245,9 @@
     background-color: transparent;
     top: 0.5rem;
     border-radius: 25px;
-    transition: all 0.2s ease-in-out;
+    transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     @media (min-width: $from-small) {
       display: flex;
-    }
-    &.hide {
-      top: -5rem;
     }
     #{ $self }__title {
       text-transform: uppercase;

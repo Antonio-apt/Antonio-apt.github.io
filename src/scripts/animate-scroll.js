@@ -1,45 +1,28 @@
-import debounce from './debounce';
-
 export default class AnimateScroll {
   constructor(sections) {
     this.sections = document.querySelectorAll(sections);
-    this.windowHalf = Math.floor(window.innerHeight * 0.6);
-
-    this.animate = debounce(this.animate.bind(this), 50);
   }
 
   init() {
     if (!this.sections.length) return this;
-    this.getDistances();
-    this.animate();
-    this.addEvent();
+
+    this.observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            this.observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    this.sections.forEach((section) => this.observer.observe(section));
     return this;
   }
 
-  addEvent() {
-    window.addEventListener('scroll', this.animate);
-  }
-
-  getDistances() {
-    const yOffset = window.scrollY;
-    this.distances = [...this.sections].map((section) => ({
-      el: section,
-      offset: section.getBoundingClientRect().top + yOffset - this.windowHalf,
-    }));
-  }
-
-  animate() {
-    const currentY = window.scrollY;
-    this.distances.forEach((dist) => {
-      if (currentY > dist.offset) {
-        dist.el.classList.add('active');
-      } else if (dist.el.classList.contains('active')) {
-        dist.el.classList.remove('active');
-      }
-    });
-  }
-
   stop() {
-    window.removeEventListener('scroll', this.animate);
+    if (this.observer) this.observer.disconnect();
   }
 }

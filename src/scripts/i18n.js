@@ -3,6 +3,22 @@ import i18next from "i18next";
 const STORAGE_KEY = "preferred-locale";
 const { BASE_URL } = import.meta.env;
 
+const LOCALE_LABELS = { en: "English", pt: "Português" };
+
+const createLangButton = (locale) => {
+  const btn = document.createElement("button");
+  btn.className = "lang-button";
+  btn.dataset.locale = locale;
+  btn.innerHTML = `<div class="lang-button__border"></div><div class="lang-button__text"><span> ${LOCALE_LABELS[locale] || locale} </span></div>`;
+  return btn;
+};
+
+const createLangButtons = (locales) => {
+  document.querySelectorAll(".header__translate-section").forEach((section) => {
+    locales.forEach((locale) => section.appendChild(createLangButton(locale)));
+  });
+};
+
 const loadLanguages = () => {
   const url = `${BASE_URL || ""}languages.json`;
   return fetch(url)
@@ -63,6 +79,7 @@ const initTranslations = () => {
         const elements = document.querySelectorAll("[data-i18n]");
         applyTranslations(elements, languages);
 
+        createLangButtons(Object.keys(languages));
         const langButtons = document.querySelectorAll(".lang-button");
         updateLangButtonsState(langButtons, i18next.language);
 

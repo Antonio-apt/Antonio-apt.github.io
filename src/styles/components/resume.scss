@@ -65,10 +65,7 @@
   &__body {
     .separator {
       height: 2px;
-      border-radius: 2px;
       margin: 32px 0;
-      width: 100%;
-      background: $clr-yellow;
       &:last-of-type {
         opacity: 0;
       }

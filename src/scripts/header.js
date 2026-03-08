@@ -4,13 +4,16 @@ const HIDE_THRESHOLD_PX = 52;
 
 export default function initHeader() {
   const header = document.querySelector('.header');
+  const burger = document.getElementById('burger');
   if (!header) return;
 
   let prevScroll = window.scrollY;
   let prevDirection = null;
 
+  const isMobileMenuOpen = () => burger?.classList.contains('is-open') ?? false;
+
   const toggleHeader = (direction, curScroll) => {
-    if (direction === SCROLL_DOWN && curScroll > HIDE_THRESHOLD_PX) {
+    if (direction === SCROLL_DOWN && curScroll > HIDE_THRESHOLD_PX && !isMobileMenuOpen()) {
       header.classList.add('hide');
       prevDirection = direction;
     } else if (direction === SCROLL_UP) {

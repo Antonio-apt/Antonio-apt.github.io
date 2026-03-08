@@ -4,7 +4,10 @@
   bottom: 0;
   left: 0;
   background: $clr-footer;
-  padding: 6rem 3rem;
+  padding: 3rem 1.5rem;
+  @media (min-width: $from-small) {
+    padding: 6rem 3rem;
+  }
   overflow: hidden;
   &__container {
     display: flex;
@@ -25,7 +28,10 @@
       a {
         color: $clr-white;
         text-decoration: none;
-        font-size: 3em;
+        font-size: 1.8em;
+        @media (min-width: $from-small) {
+          font-size: 3em;
+        }
         &::after {
           width: 80%;
           height: 1px;
@@ -59,7 +65,10 @@
         margin-bottom: auto;
         gap: 0.9rem;
         button {
-          padding-left: 5rem;
+          padding-left: 1.5rem;
+          @media (min-width: $from-small) {
+            padding-left: 5rem;
+          }
           display: flex;
           align-items: center;
           gap: 2%;
@@ -70,18 +79,8 @@
           color: $clr-white;
         }
       }
-      #{ $self }__final { 
+      #{ $self }__final {
         margin-top: auto;
-        .separator {
-          position: relative;
-          height: 1px;
-          border-radius: 2px;
-          margin: 30px 0;
-          width: 100%;
-          background: $clr-yellow;
-          will-change: transform;
-          z-index: 1;
-        }
       }
     }
   }

@@ -59,14 +59,4 @@
       content: "";
     }
   }
-  .separator {
-    position: relative;
-    height: 1px;
-    border-radius: 2px;
-    margin: 30px 0;
-    width: 100%;
-    background: $clr-yellow;
-    will-change: transform;
-    z-index: 1;
-  }
 }
