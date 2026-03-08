@@ -1,5 +1,5 @@
 import "./styles/main.scss";
-import "./scripts/tilt";
+import "./scripts/lib/tilt";
 import initTranslations from "./scripts/i18n";
 import initResume from "./scripts/resume";
 import initStars from "./scripts/star";

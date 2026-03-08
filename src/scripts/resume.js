@@ -74,7 +74,7 @@ export const renderResume = () => {
 };
 
 export default async function initResume() {
-  const url = `${BASE_URL || ''}resume.json`;
+  const url = `${BASE_URL || ''}data/resume.json`;
   try {
     const res = await fetch(url);
     if (!res.ok) throw new Error(`Failed to load resume: ${res.status}`);
